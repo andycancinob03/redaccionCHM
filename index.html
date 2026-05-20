@@ -618,21 +618,99 @@ async function runAnalysis() {
 
 async function analyzeWithAI(text, idx) {
   if (analysisCache[idx]) return analysisCache[idx];
-  var prompt = 'Eres evaluador de redacción corporativa. Analiza este mensaje interno y devuelve SOLO un JSON válido sin backticks ni texto extra:\n{"problemas":["hasta 3 de: IDEA_AL_FINAL|ORACION_LARGA|REDUNDANCIA|GERUNDISMO|VOZ_PASIVA|LENGUAJE_VACIO|SIN_ACCION|AMBIGUEDAD"],"fortaleza":"una fortaleza en máx 8 palabras","sugerencia":"una sugerencia en máx 12 palabras"}\nTexto: "'+text.replace(/"/g,"'")+'"';
-  try {
-    var res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:300, messages:[{role:'user',content:prompt}] })
-    });
-    var data = await res.json();
-    var raw = (data.content||[]).filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
-    var parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
-    analysisCache[idx] = parsed;
-    return parsed;
-  } catch(e) {
-    return { problemas:[], fortaleza:'No se pudo analizar', sugerencia:'Revisa la conexión e intenta de nuevo' };
+  var result = analyzeLocalFull(text);
+  analysisCache[idx] = result;
+  return result;
+}
+
+function analyzeLocalFull(text) {
+  if (!text || text.trim().length < 5) {
+    return { problemas:[], fortaleza:'texto muy breve', sugerencia:'escribe al menos una oración completa' };
   }
+  var tl = text.toLowerCase();
+  var words = text.trim().split(/\s+/);
+  var wc = words.length;
+  var sentences = text.split(/[.!?]+/).map(function(s){return s.trim();}).filter(function(s){return s.split(/\s+/).length > 2;});
+  var problemas = [], strengths = [];
+
+  // Idea al final
+  var first40 = tl.split(/\s+/).slice(0,40).join(' ');
+  var keyFirst = /jueves|se adelanta|cambio|reuni[oó]n|les informo|les comunico|aviso/.test(first40);
+  if (!keyFirst && wc > 15) problemas.push('IDEA_AL_FINAL');
+  else if (keyFirst) strengths.push('info_inicio');
+
+  // Oración larga
+  var longS = sentences.filter(function(s){return s.split(/\s+/).length > 25;});
+  if (longS.length > 0) problemas.push('ORACION_LARGA');
+  else if (sentences.length > 0) strengths.push('conciso');
+
+  // Voz pasiva
+  if (/\b(fue|fueron|ha sido|han sido|se informa|se comunica|se notifica|queda aplazad|queda adelantad)\b/i.test(text))
+    problemas.push('VOZ_PASIVA');
+
+  // Gerundismo
+  var gers = (text.match(/\b\w+(?:ando|iendo)\b/gi) || []);
+  if (gers.length >= 2) problemas.push('GERUNDISMO');
+
+  // Lenguaje vacío
+  var empty = ['por medio de la presente','sirva el presente','me permito informar',
+               'mediante la presente','en atención a','me es grato','tengo el agrado'];
+  if (empty.some(function(p){return tl.includes(p);})) problemas.push('LENGUAJE_VACIO');
+
+  // Redundancia
+  var redundant = ['en el día de hoy','a la brevedad posible','colaborar juntos','primera prioridad'];
+  if (redundant.some(function(r){return tl.includes(r);})) problemas.push('REDUNDANCIA');
+
+  // Extensión
+  if (wc > 100) problemas.push('TEXTO_LARGO');
+  else if (wc >= 20 && wc <= 80) strengths.push('extension');
+
+  // Llamado a la acción
+  var hasCTA = /confirma|confirmar|por favor|actualiza|actualizar|agenda|tener en cuenta|cualquier duda|contáct|comuníc/i.test(text);
+  if (!hasCTA) problemas.push('SIN_ACCION');
+  else strengths.push('accion');
+
+  // Información completa
+  var hasDay   = /jueves|\bjuev\.?\b/i.test(text);
+  var hasTime  = /3[\s:]?p\.?\s?m\.?|15[\s:h.]?00|tres de la tarde|3:00/i.test(text);
+  var hasReason= /director|viernes|viaj[ae]/i.test(text);
+  if (hasDay && hasTime && hasReason) strengths.push('completo');
+
+  // Fortaleza — prioridad por impacto pedagógico
+  var fMap = {
+    completo:    'información completa: día, hora y motivo',
+    accion:      'llamado a la acción bien definido',
+    info_inicio: 'va directo al punto principal desde el inicio',
+    conciso:     'oraciones claras y bien estructuradas',
+    extension:   'extensión adecuada para un mensaje interno'
+  };
+  var fortaleza = 'intención comunicativa presente';
+  ['completo','accion','info_inicio','conciso','extension'].forEach(function(k){
+    if (!fortaleza || fortaleza === 'intención comunicativa presente') {
+      if (strengths.indexOf(k) !== -1) fortaleza = fMap[k];
+    }
+  });
+
+  // Sugerencia — basada en el problema más prioritario
+  var sMap = {
+    IDEA_AL_FINAL:   "empieza con 'La reunión se adelanta al jueves a las 3 p.m.'",
+    ORACION_LARGA:   "parte la oración más larga usando punto seguido",
+    VOZ_PASIVA:      "usa voz activa: di directamente quién hace qué",
+    GERUNDISMO:      "reemplaza los gerundios por verbos conjugados",
+    LENGUAJE_VACIO:  "elimina el encabezado y ve directo al mensaje",
+    REDUNDANCIA:     "elimina la palabra que repite lo que ya dijiste",
+    SIN_ACCION:      "indica qué debe hacer el lector: confirmar, actualizar agenda, etc.",
+    TEXTO_LARGO:     "este mensaje puede decirse en la mitad de palabras"
+  };
+  var sugerencia = problemas.length > 0
+    ? (sMap[problemas[0]] || 'revisa la estructura según la pirámide invertida')
+    : 'agrega un canal de contacto para posibles dudas';
+
+  return {
+    problemas: problemas.slice(0, 3),
+    fortaleza:  fortaleza,
+    sugerencia: sugerencia
+  };
 }
 
 function renderAiResult(container, result) {
