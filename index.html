@@ -22,8 +22,6 @@
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:var(--ink);font-size:15px;line-height:1.7;min-height:100vh}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
- 
-/* HEADER */
 .hdr{background:var(--ink);color:var(--white);padding:2rem 1.5rem 1.75rem}
 .hdr-eye{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--amber-brd);margin-bottom:.6rem}
 .hdr-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.15;margin-bottom:.4rem}
@@ -31,37 +29,24 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .pills{display:flex;flex-wrap:wrap;gap:.5rem}
 .pill{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:4px 11px;border-radius:100px;font-size:11.5px;color:rgba(255,255,255,.8)}
 .pill i{font-size:13px;opacity:.7}
- 
-/* NAV */
 .nav{background:var(--white);border-bottom:1px solid var(--brd);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:200}
 .nav::-webkit-scrollbar{display:none}
 .nbtn{padding:13px 18px;border:none;background:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;display:flex;align-items:center;gap:6px}
-.nbtn:hover{color:var(--ink)}
-.nbtn.active{color:var(--ink);border-bottom-color:var(--amber)}
+.nbtn:hover{color:var(--ink)}.nbtn.active{color:var(--ink);border-bottom-color:var(--amber)}
 .nbtn i{font-size:15px}
 .ndot{width:18px;height:18px;background:var(--amber-bg);color:var(--amber-dk);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
 .nbtn.active .ndot{background:var(--amber);color:var(--white)}
- 
-/* SCREENS */
 .screen{display:none}.screen.active{display:block}
 .wrap{max-width:820px;margin:0 auto;padding:2rem 1.25rem}
- 
-/* LABELS */
 .sec-lbl{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .pg-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;color:var(--ink);line-height:1.2;margin-bottom:.4rem}
 .pg-meta{font-size:13px;color:var(--muted);margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 .badge{display:inline-block;padding:2px 10px;border-radius:100px;font-size:11.5px;font-weight:500}
-.ba{background:var(--amber-bg);color:var(--amber-dk)}
-.bt{background:var(--teal-bg);color:var(--teal-dk)}
-.bc{background:var(--coral-bg);color:var(--coral-dk)}
-.bb{background:var(--blue-bg);color:var(--blue-dk)}
+.ba{background:var(--amber-bg);color:var(--amber-dk)}.bt{background:var(--teal-bg);color:var(--teal-dk)}
+.bc{background:var(--coral-bg);color:var(--coral-dk)}.bb{background:var(--blue-bg);color:var(--blue-dk)}
 .bg{background:var(--green-bg);color:var(--green)}
- 
-/* CARDS */
 .card{background:var(--white);border:1px solid var(--brd);border-radius:var(--r);padding:1.2rem 1.3rem;margin-bottom:1rem}
 .div{border:none;border-top:1px solid var(--brd);margin:1.5rem 0}
- 
-/* HOME */
 .hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.5rem}
 .hcard{background:var(--white);border:1px solid var(--brd);border-radius:var(--rl);padding:1.5rem 1.4rem;cursor:pointer;transition:border-color .15s;text-align:left}
 .hcard:hover{border-color:var(--brd2)}
@@ -69,8 +54,6 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .hcard-ttl{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
 .hcard-dsc{font-size:13px;color:var(--muted);line-height:1.5}
 .hcard-arr{font-size:13px;color:var(--muted);margin-top:.8rem;display:block}
- 
-/* DIAGNOSTIC FORM */
 .prog{height:4px;background:var(--brd);border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
 .prog-f{height:4px;background:var(--teal);border-radius:2px;transition:width .4s}
 .qblock{margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--brd)}
@@ -90,8 +73,6 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .italic-blk{background:var(--surface);border:1px dashed var(--brd2);border-radius:var(--rs);padding:1rem 1.1rem;margin-bottom:1rem;font-size:13px;color:var(--ink2);line-height:1.7;font-style:italic}
 .timer-lbl{font-size:13px;font-weight:600;color:var(--teal)}
 .nav-row{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem}
- 
-/* BUTTONS */
 .btn{border-radius:var(--rs);padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:background .12s,border-color .12s,opacity .12s;display:inline-flex;align-items:center;gap:6px}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .btn-p{background:var(--teal);color:var(--white);border-color:var(--teal)}
@@ -100,28 +81,24 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .btn-s:hover:not(:disabled){background:var(--surface)}
 .btn-a{background:var(--amber);color:var(--white);border-color:var(--amber)}
 .btn-a:hover:not(:disabled){background:var(--amber-dk)}
+.btn-blue{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.btn-blue:hover:not(:disabled){background:var(--blue-dk)}
 .btn-cp{background:var(--surface);color:var(--ink2);border:1px solid var(--brd);font-size:12px;padding:5px 12px;border-radius:100px}
 .btn-cp:hover{background:var(--brd)}
 .btn-cp.done{background:var(--green-bg);color:var(--green);border-color:var(--green-brd)}
- 
-/* RESULTS — PART A */
 .srow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .slbl{font-size:12.5px;color:var(--ink2);width:185px;flex-shrink:0;line-height:1.4}
 .sbg{flex:1;height:20px;background:var(--surface);border-radius:3px;overflow:hidden;border:1px solid var(--brd)}
 .sfill{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:7px;transition:width .5s}
 .sval{font-size:11px;font-weight:600;color:var(--white);white-space:nowrap}
 .sext{font-size:12px;color:var(--muted);margin-left:6px}
- 
-/* RESULTS — PART B */
 .bchip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:100px;font-size:12px;font-weight:500;margin:3px}
 .bchip-ok{background:var(--green-bg);color:var(--green)}
 .bchip-wrong{background:var(--coral-bg);color:var(--coral-dk)}
 .bchip-miss{background:var(--amber-bg);color:var(--amber-dk)}
- 
-/* RESULTS — PART C ANALYSIS */
 .analysis-wrap{margin-top:.75rem}
 .analysis-summary{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
-.asm-card{flex:1;min-width:120px;background:var(--surface);border:1px solid var(--brd);border-radius:var(--rs);padding:.75rem 1rem;text-align:center}
+.asm-card{flex:1;min-width:110px;background:var(--surface);border:1px solid var(--brd);border-radius:var(--rs);padding:.75rem 1rem}
 .asm-num{font-size:26px;font-weight:600;line-height:1}
 .asm-lbl{font-size:11.5px;color:var(--muted);margin-top:3px}
 .analysis-section{margin-bottom:1rem}
@@ -131,31 +108,54 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .issue-item{display:flex;gap:10px;align-items:flex-start;padding:.6rem .75rem;border-radius:var(--rs);margin-bottom:.4rem}
 .issue-item.problem{background:var(--coral-bg);border:1px solid var(--coral-brd)}
 .issue-item.strength{background:var(--green-bg);border:1px solid var(--green-brd)}
-.issue-item.info{background:var(--blue-bg);border:1px solid var(--blue-brd)}
 .issue-icon{flex-shrink:0;font-size:15px;margin-top:1px}
-.issue-content{}
 .issue-label{font-size:12.5px;font-weight:600;margin-bottom:2px}
-.issue-label.p{color:var(--coral-dk)}
-.issue-label.s{color:var(--green)}
-.issue-label.i{color:var(--blue-dk)}
+.issue-label.p{color:var(--coral-dk)}.issue-label.s{color:var(--green)}
 .issue-exp{font-size:12px;color:var(--ink2);line-height:1.5}
-.completeness-row{display:flex;align-items:center;gap:8px;padding:.5rem .75rem;border-radius:var(--rs);margin-bottom:.35rem;background:var(--surface);border:1px solid var(--brd)}
+.comp-row{display:flex;align-items:center;gap:8px;padding:.5rem .75rem;border-radius:var(--rs);margin-bottom:.35rem;background:var(--surface);border:1px solid var(--brd)}
 .comp-check{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px}
-.comp-present{background:var(--green-bg);color:var(--green)}
-.comp-missing{background:var(--coral-bg);color:var(--coral-dk)}
+.comp-yes{background:var(--green-bg);color:var(--green)}
+.comp-no{background:var(--coral-bg);color:var(--coral-dk)}
 .comp-lbl{font-size:13px;font-weight:500;color:var(--ink);flex:1}
-.comp-val{font-size:12px;color:var(--muted);text-align:right}
+.comp-val{font-size:12px;color:var(--muted)}
 .prompt-mono{background:var(--ink);color:#a8d8d8;border-radius:var(--rs);padding:.85rem 1rem;font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-top:.6rem}
- 
-/* INFO BOXES */
 .info-box{border-radius:var(--rs);padding:.75rem 1rem;font-size:13px;line-height:1.55;display:flex;gap:8px;align-items:flex-start;margin-bottom:1rem}
 .info-box i{font-size:16px;flex-shrink:0;margin-top:1px}
 .ib-a{background:var(--amber-bg);color:var(--amber-dk);border:1px solid var(--amber-brd)}
 .ib-t{background:var(--teal-bg);color:var(--teal-dk);border:1px solid var(--teal-brd)}
- 
-/* DONE */
+.ib-c{background:var(--coral-bg);color:var(--coral-dk);border:1px solid var(--coral-brd)}
+.ib-b{background:var(--blue-bg);color:var(--blue-dk);border:1px solid var(--blue-brd)}
 .done-ico{width:56px;height:56px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem}
- 
+/* STATS */
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.2rem}
+.metric-card{background:var(--surface);border-radius:var(--rs);padding:.75rem 1rem}
+.metric-val{font-size:26px;font-weight:600;color:var(--ink)}
+.metric-lbl{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.3}
+.stat-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.stat-lbl{font-size:12px;color:var(--ink2);width:195px;flex-shrink:0;line-height:1.35;display:flex;align-items:center;gap:4px}
+.stat-bg{flex:1;height:20px;background:var(--surface);border-radius:3px;overflow:hidden;border:1px solid var(--brd)}
+.stat-fill{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:6px;transition:width .4s}
+.stat-ext{font-size:12px;color:var(--muted);margin-left:6px;white-space:nowrap}
+.writing-card{background:var(--white);border:1px solid var(--brd);border-radius:var(--r);padding:1rem 1.1rem;margin-bottom:.75rem}
+.writing-meta{font-size:11px;color:var(--muted);margin-bottom:.5rem}
+.writing-text{font-size:13px;color:var(--ink);line-height:1.65;margin-bottom:.6rem}
+.ai-result{border-top:1px solid var(--brd);padding-top:.7rem;margin-top:.7rem}
+.ai-row{display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+.ai-row-lbl{font-weight:500;color:var(--ink);flex-shrink:0;min-width:70px}
+.chip{display:inline-block;padding:2px 9px;border-radius:100px;font-size:11.5px;font-weight:500;margin:2px 3px 2px 0}
+.chip-prob{background:var(--coral-bg);color:var(--coral-dk)}
+.chip-ok{background:var(--green-bg);color:var(--green)}
+.freq-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.freq-lbl{font-size:12px;color:var(--ink);width:165px;flex-shrink:0}
+.freq-bg{flex:1;height:18px;background:var(--surface);border-radius:3px;overflow:hidden;border:1px solid var(--brd)}
+.freq-fill{height:100%;background:#D85A30;border-radius:2px;display:flex;align-items:center;padding-left:5px}
+.spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.35);border-top-color:var(--white);border-radius:50%;animation:rot .7s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.spin-dark{border:2px solid rgba(10,110,86,.2);border-top-color:var(--teal);animation:rot .7s linear infinite}
+/* SETUP SCREEN */
+.setup-card{background:var(--white);border:2px dashed var(--amber-brd);border-radius:var(--rl);padding:1.5rem;margin-bottom:1.2rem}
+.url-input{width:100%;padding:10px 14px;border:1px solid var(--brd2);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:13.5px;color:var(--ink);outline:none;margin-top:.5rem}
+.url-input:focus{border-color:var(--teal);box-shadow:0 0 0 2px rgba(10,110,86,.1)}
 /* PROMPTS */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem;margin-top:.5rem}
 .pcard{background:var(--white);border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden}
@@ -173,23 +173,17 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 .tip-row i{font-size:16px;color:var(--amber);flex-shrink:0;margin-top:1px}
 .tip-row p{font-size:12.5px;color:var(--amber-dk);line-height:1.5}
 .copy-row{display:flex;justify-content:flex-end;margin-bottom:.75rem}
- 
 @media(max-width:600px){
-  .hdr{padding:1.5rem 1rem 1.25rem}
-  .wrap{padding:1.5rem 1rem}
-  .pgrid{grid-template-columns:1fr}
-  .hgrid{grid-template-columns:1fr}
-  .llbl{min-width:42px;font-size:10.5px}
-  .lbtn{width:32px;height:32px}
+  .hdr{padding:1.5rem 1rem 1.25rem}.wrap{padding:1.5rem 1rem}
+  .pgrid,.hgrid{grid-template-columns:1fr}
+  .llbl{min-width:42px;font-size:10.5px}.lbtn{width:32px;height:32px}
   .analysis-summary{flex-direction:column}
-  .asm-card{text-align:left;display:flex;align-items:center;gap:12px}
-  .asm-num{font-size:22px}
 }
 </style>
 </head>
 <body>
 <h1 class="sr-only">Herramienta de redacción estratégica — CHM Minería y Uninorte</h1>
- 
+
 <header class="hdr">
   <div class="hdr-eye">CHM Minería × Uninorte — Centro de Educación Continuada</div>
   <div class="hdr-title">Redacción estratégica para líderes</div>
@@ -200,78 +194,75 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
     <span class="pill"><i class="ti ti-device-laptop"></i>Computador o celular</span>
   </div>
 </header>
- 
+
 <nav class="nav" role="tablist">
   <button class="nbtn active" onclick="showScreen('home')" role="tab"><i class="ti ti-home" aria-hidden="true"></i>Inicio</button>
   <button class="nbtn" onclick="showScreen('diag')" role="tab"><span class="ndot">0</span>Diagnóstico</button>
+  <button class="nbtn" onclick="showScreen('stats')" role="tab"><i class="ti ti-chart-bar" aria-hidden="true"></i>Resultados</button>
   <button class="nbtn" onclick="showScreen('prompts')" role="tab"><i class="ti ti-sparkles" aria-hidden="true"></i>Biblioteca de prompts</button>
 </nav>
- 
+
 <!-- HOME -->
 <div id="screen-home" class="screen active">
 <div class="wrap">
   <div class="sec-lbl">Bienvenido al taller</div>
   <div class="pg-title">¿Por dónde quieres empezar?</div>
-  <p style="font-size:14px;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">Herramienta autónoma para participantes. Funciona sin conexión a ningún servidor.</p>
+  <p style="font-size:14px;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">Elige tu rol para continuar.</p>
   <div class="hgrid">
     <button class="hcard" onclick="showScreen('diag')">
       <div class="hcard-ico" style="background:var(--teal-bg)"><i class="ti ti-clipboard-check" style="color:var(--teal)" aria-hidden="true"></i></div>
-      <div class="hcard-ttl">Diagnóstico inicial</div>
-      <div class="hcard-dsc">Autoevaluación · Detección de errores · Mini-escritura con análisis automático. Aprox. 12 minutos.</div>
-      <span class="hcard-arr">Comenzar →</span>
+      <div class="hcard-ttl">Soy participante</div>
+      <div class="hcard-dsc">Completar el diagnóstico inicial — autoevaluación, detección de errores y mini-escritura con análisis automático.</div>
+      <span class="hcard-arr">Comenzar diagnóstico →</span>
+    </button>
+    <button class="hcard" onclick="showScreen('stats')">
+      <div class="hcard-ico" style="background:var(--blue-bg)"><i class="ti ti-chart-bar" style="color:var(--blue)" aria-hidden="true"></i></div>
+      <div class="hcard-ttl">Soy tallerista</div>
+      <div class="hcard-dsc">Ver estadísticas grupales en tiempo real y análisis de escrituras con IA.</div>
+      <span class="hcard-arr">Ver resultados del grupo →</span>
     </button>
     <button class="hcard" onclick="showScreen('prompts')">
       <div class="hcard-ico" style="background:var(--amber-bg)"><i class="ti ti-sparkles" style="color:var(--amber)" aria-hidden="true"></i></div>
       <div class="hcard-ttl">Biblioteca de prompts</div>
       <div class="hcard-dsc">6 prompts listos para usar en Claude o ChatGPT. Uno por cada momento clave del taller.</div>
-      <span class="hcard-arr">Explorar →</span>
+      <span class="hcard-arr">Explorar prompts →</span>
     </button>
-    <div class="hcard" style="cursor:default;border-style:dashed;background:var(--surface)">
-      <div class="hcard-ico" style="background:var(--blue-bg)"><i class="ti ti-chart-bar" style="color:var(--blue)" aria-hidden="true"></i></div>
-      <div class="hcard-ttl" style="font-size:14px">Estadísticas grupales en tiempo real</div>
-      <div class="hcard-dsc">Para ver los resultados del grupo, el tallerista usa la versión dentro de Claude.ai, donde se habilita el almacenamiento compartido.</div>
-    </div>
   </div>
 </div>
 </div>
- 
+
 <!-- DIAGNÓSTICO -->
 <div id="screen-diag" class="screen">
 <div class="wrap">
- 
-  <!-- intro -->
   <div id="diag-intro">
     <div class="sec-lbl">Momento 0 — Antes de iniciar</div>
     <div class="pg-title">Diagnóstico inicial</div>
     <div class="pg-meta"><span class="badge bt">⏱ ~12 minutos</span><span class="badge ba">3 partes</span></div>
-    <div class="info-box ib-a"><i class="ti ti-alert-circle" aria-hidden="true"></i><span>Tus respuestas se guardan solo en este dispositivo. No se envían a ningún lugar.</span></div>
     <div class="card">
-      <p style="font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:.6rem"><strong>Parte A</strong> — Autoevaluación de hábitos de escritura (8 preguntas, escala 1–5)</p>
-      <p style="font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:.6rem"><strong>Parte B</strong> — Detección de errores en un párrafo corporativo real</p>
-      <p style="font-size:14px;color:var(--ink2);line-height:1.6"><strong>Parte C</strong> — Mini-escritura cronometrada con diagnóstico automático al finalizar</p>
+      <p style="font-size:14px;color:var(--ink2);margin-bottom:.5rem;line-height:1.6"><strong>Parte A</strong> — Autoevaluación de hábitos (8 preguntas, escala 1–5)</p>
+      <p style="font-size:14px;color:var(--ink2);margin-bottom:.5rem;line-height:1.6"><strong>Parte B</strong> — Detección de errores en un párrafo corporativo real</p>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.6"><strong>Parte C</strong> — Mini-escritura cronometrada con diagnóstico automático</p>
     </div>
     <div style="display:flex;justify-content:flex-end">
       <button class="btn btn-p" onclick="startDiag()"><i class="ti ti-arrow-right" aria-hidden="true"></i>Comenzar</button>
     </div>
   </div>
- 
-  <!-- Part A -->
+
   <div id="diag-a" style="display:none">
     <div class="prog"><div class="prog-f" style="width:33%"></div></div>
     <div class="sec-lbl">Parte A de 3 · Autoevaluación</div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:1.2rem;line-height:1.5">Escala: 1 = nunca · 5 = siempre. No hay respuestas correctas.</p>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:1.2rem">Escala: 1 = nunca · 5 = siempre.</p>
     <div class="card" id="partA-container"></div>
     <div class="nav-row">
       <button class="btn btn-s" onclick="showStep('intro')"><i class="ti ti-arrow-left" aria-hidden="true"></i>Atrás</button>
       <button class="btn btn-p" onclick="goToB()">Continuar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
     </div>
   </div>
- 
-  <!-- Part B -->
+
   <div id="diag-b" style="display:none">
     <div class="prog"><div class="prog-f" style="width:66%"></div></div>
     <div class="sec-lbl">Parte B de 3 · Detección de errores</div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem;line-height:1.5">Lee el siguiente párrafo corporativo y selecciona todos los problemas que detectas:</p>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem">Selecciona todos los problemas que detectas en este párrafo:</p>
     <div class="italic-blk">"En el marco del proceso de mejoramiento continuo que se viene adelantando en nuestra organización desde el año anterior y que ha sido parte de nuestra estrategia de transformación institucional, y teniendo en cuenta los diversos factores que inciden en el rendimiento del equipo, entre los cuales se encuentran los tiempos de respuesta, la carga laboral y la comunicación interna, se hace necesario comunicar que habrá cambios en los horarios a partir del próximo mes."</div>
     <div class="card"><div class="cbgrp" id="partB-container"></div></div>
     <div class="nav-row">
@@ -279,93 +270,141 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
       <button class="btn btn-p" onclick="goToC()">Continuar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
     </div>
   </div>
- 
-  <!-- Part C -->
+
   <div id="diag-c" style="display:none">
     <div class="prog"><div class="prog-f" style="width:90%"></div></div>
     <div class="sec-lbl">Parte C de 3 · Mini-escritura</div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem;line-height:1.5">Tienes <strong class="timer-lbl" id="timer-txt">3:00</strong> para escribir. Escribe con naturalidad, sin corregirte.</p>
-    <div class="italic-blk" style="font-style:normal"><strong>Situación:</strong> Debes informar a tu equipo que la reunión mensual se adelanta al jueves de esta semana a las 3:00 p.m., porque el director general necesita viajar el viernes. Escribe el mensaje como lo harías en la realidad.</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem">Tienes <strong class="timer-lbl" id="timer-txt">3:00</strong> para escribir. Sin correcciones, con naturalidad.</p>
+    <div class="italic-blk" style="font-style:normal"><strong>Situación:</strong> Informa a tu equipo que la reunión mensual se adelanta al jueves de esta semana a las 3:00 p.m., porque el director general necesita viajar el viernes.</div>
     <div class="card" style="padding:.6rem">
       <textarea id="partC-text" style="width:100%;border:none;background:transparent;resize:vertical;min-height:100px;font-size:14px;color:var(--ink);outline:none;font-family:'DM Sans',sans-serif;line-height:1.65;padding:.5rem" placeholder="Escribe aquí tu mensaje..."></textarea>
     </div>
     <div class="nav-row">
       <button class="btn btn-s" onclick="stopTimer();showStep('b')"><i class="ti ti-arrow-left" aria-hidden="true"></i>Atrás</button>
-      <button class="btn btn-p" onclick="submitDiag()"><i class="ti ti-send" aria-hidden="true"></i>Enviar y ver análisis</button>
+      <button class="btn btn-p" id="submit-btn" onclick="submitDiag()"><i class="ti ti-send" aria-hidden="true"></i>Enviar y ver análisis</button>
     </div>
   </div>
- 
-  <!-- Results -->
+
   <div id="diag-results" style="display:none">
     <div style="text-align:center;margin-bottom:1.5rem">
       <div class="done-ico"><i class="ti ti-check" style="font-size:28px;color:var(--teal)" aria-hidden="true"></i></div>
       <p style="font-size:16px;font-weight:600;color:var(--ink);margin-bottom:5px">Diagnóstico completado</p>
-      <p style="font-size:13px;color:var(--muted)">Resultados personales — solo visibles para ti</p>
+      <p style="font-size:13px;color:var(--muted)" id="save-status">Guardando respuesta...</p>
     </div>
- 
-    <!-- A results -->
-    <div class="card">
-      <div class="sec-lbl" style="margin-bottom:.75rem">Parte A — Autoevaluación de hábitos</div>
-      <div id="res-a"></div>
-    </div>
- 
-    <!-- B results -->
-    <div class="card">
-      <div class="sec-lbl" style="margin-bottom:.75rem">Parte B — Errores detectados</div>
-      <div id="res-b"></div>
-      <div id="res-b-exp" style="margin-top:.85rem"></div>
-    </div>
- 
-    <!-- C results — writing + analysis -->
+    <div class="card"><div class="sec-lbl" style="margin-bottom:.75rem">Parte A — Autoevaluación</div><div id="res-a"></div></div>
+    <div class="card"><div class="sec-lbl" style="margin-bottom:.75rem">Parte B — Errores detectados</div><div id="res-b"></div><div id="res-b-exp" style="margin-top:.85rem"></div></div>
     <div class="card">
       <div class="sec-lbl" style="margin-bottom:.5rem">Parte C — Tu mini-escritura</div>
       <div id="res-c-text" style="background:var(--surface);border:1px solid var(--brd);border-radius:var(--rs);padding:.85rem 1rem;font-size:13.5px;color:var(--ink);line-height:1.65;margin-bottom:1rem"></div>
- 
-      <!-- ANALYSIS SECTION -->
       <div class="div" style="margin-top:0"></div>
-      <div class="sec-lbl" style="margin-bottom:.75rem">Análisis automático de la escritura</div>
-      <div class="analysis-wrap" id="res-c-analysis"></div>
- 
-      <!-- AI prompt -->
+      <div class="sec-lbl" style="margin-bottom:.75rem">Análisis automático</div>
+      <div id="res-c-analysis"></div>
       <div class="div"></div>
-      <div class="info-box ib-t" style="margin-bottom:.5rem"><i class="ti ti-robot" aria-hidden="true"></i><span>¿Quieres un análisis más profundo? Usa este prompt en Claude.ai o ChatGPT:</span></div>
+      <div class="info-box ib-t" style="margin-bottom:.5rem"><i class="ti ti-robot" aria-hidden="true"></i><span>Prompt listo para un análisis más profundo en Claude o ChatGPT:</span></div>
       <div class="prompt-mono" id="res-c-prompt"></div>
       <div style="display:flex;justify-content:flex-end;margin-top:.6rem">
         <button class="btn btn-cp" id="copy-pmt-btn" onclick="copyPmt()"><i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt</button>
       </div>
     </div>
- 
     <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem">
       <button class="btn btn-s" onclick="resetDiag()"><i class="ti ti-refresh" aria-hidden="true"></i>Hacer de nuevo</button>
-      <button class="btn btn-a" onclick="showScreen('prompts')"><i class="ti ti-sparkles" aria-hidden="true"></i>Ver biblioteca de prompts</button>
+      <button class="btn btn-a" onclick="showScreen('prompts')"><i class="ti ti-sparkles" aria-hidden="true"></i>Ver prompts</button>
     </div>
   </div>
- 
 </div>
 </div>
- 
+
+<!-- ESTADÍSTICAS -->
+<div id="screen-stats" class="screen">
+<div class="wrap">
+  <!-- Setup (shown when no API_URL configured) -->
+  <div id="stats-setup" style="display:none">
+    <div class="sec-lbl">Configuración inicial</div>
+    <div class="pg-title">Conectar con Google Sheets</div>
+    <div class="setup-card">
+      <p style="font-size:14px;font-weight:500;color:var(--ink);margin-bottom:.4rem">Pega aquí la URL de tu Apps Script</p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem;line-height:1.5">Se ve así: <code style="font-size:12px;background:var(--surface);padding:2px 6px;border-radius:4px">https://script.google.com/macros/s/ABC.../exec</code></p>
+      <input type="url" id="api-url-input" class="url-input" placeholder="https://script.google.com/macros/s/.../exec">
+      <div style="display:flex;justify-content:flex-end;margin-top:.75rem">
+        <button class="btn btn-p" onclick="saveApiUrl()"><i class="ti ti-check" aria-hidden="true"></i>Guardar y continuar</button>
+      </div>
+    </div>
+    <div class="info-box ib-a"><i class="ti ti-info-circle" aria-hidden="true"></i><span>La URL se guarda solo en este navegador. Los participantes no la ven — solo la usan para enviar sus respuestas.</span></div>
+  </div>
+
+  <!-- Dashboard (shown when API_URL configured) -->
+  <div id="stats-dashboard" style="display:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:1.2rem">
+      <div>
+        <div class="sec-lbl">Panel del tallerista</div>
+        <div class="pg-title" style="margin-bottom:0">Resultados en tiempo real</div>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-s" style="font-size:13px;padding:7px 14px" onclick="showScreen('stats')" id="btn-refresh"><i class="ti ti-refresh" aria-hidden="true"></i>Actualizar</button>
+        <button class="btn btn-s" style="font-size:13px;padding:7px 14px" onclick="changeApiUrl()"><i class="ti ti-settings" aria-hidden="true"></i>Cambiar URL</button>
+      </div>
+    </div>
+    <div id="stats-loading" style="text-align:center;padding:2.5rem;color:var(--muted)">
+      <span class="spin-dark" style="display:inline-block;margin-bottom:.5rem"></span><br>Cargando respuestas...
+    </div>
+    <div id="stats-empty" style="display:none;text-align:center;padding:2.5rem">
+      <p style="font-size:15px;color:var(--ink);margin-bottom:.5rem">Aún no hay respuestas</p>
+      <p style="font-size:13px;color:var(--muted)">Cuando los participantes envíen el diagnóstico, aparecerán aquí.</p>
+    </div>
+    <div id="stats-content" style="display:none">
+      <div class="metric-grid" id="stat-metrics"></div>
+      <hr class="div">
+      <p style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.75rem">Parte A — Autoevaluación (promedio por ítem, escala 1–5)</p>
+      <div id="stat-partA"></div>
+      <hr class="div">
+      <p style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.75rem">Parte B — Errores detectados en el párrafo (% del grupo)</p>
+      <div id="stat-partB"></div>
+      <hr class="div">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:.75rem">
+        <p style="font-size:13px;font-weight:600;color:var(--ink)">Parte C — Mini-escrituras del grupo</p>
+        <button class="btn btn-blue" id="btn-analyze" onclick="runAnalysis()" style="padding:7px 14px;font-size:13px"><i class="ti ti-sparkles" aria-hidden="true"></i>Analizar con IA</button>
+      </div>
+      <div id="agg-section" style="display:none;margin-bottom:1rem">
+        <div id="agg-banner" style="background:var(--teal-bg);border:1px solid var(--teal-brd);border-radius:var(--rs);padding:.75rem 1rem;font-size:13px;color:var(--teal-dk);margin-bottom:.75rem"></div>
+        <div id="freq-chart"></div>
+      </div>
+      <div id="stat-partC"></div>
+    </div>
+  </div>
+</div>
+</div>
+
 <!-- PROMPTS -->
 <div id="screen-prompts" class="screen">
 <div class="wrap">
   <div class="sec-lbl">Herramientas de IA para el taller</div>
   <div class="pg-title">Biblioteca de prompts</div>
   <div class="pg-meta"><span class="badge ba">6 prompts</span><span class="badge bt">Claude · ChatGPT · Gemini</span></div>
-  <div class="info-box ib-t"><i class="ti ti-info-circle" aria-hidden="true"></i><span>La IA es tu <strong>copiloto</strong>, no tu piloto. Úsala para ver lo que no ves, no para que escriba por ti. El criterio editorial siempre es tuyo.</span></div>
+  <div class="info-box ib-t"><i class="ti ti-info-circle" aria-hidden="true"></i><span>La IA es tu <strong>copiloto</strong>, no tu piloto. El criterio editorial siempre es tuyo.</span></div>
   <div class="pgrid" id="pgrid"></div>
 </div>
 </div>
- 
+
 <footer style="background:var(--white);border-top:1px solid var(--brd);padding:1.25rem 1.5rem;margin-top:2rem">
-  <p style="font-size:12px;color:var(--muted);text-align:center">Redacción Estratégica para Líderes · CHM Minería × Uninorte CEC · Taller 8 horas</p>
+  <p style="font-size:12px;color:var(--muted);text-align:center">Redacción Estratégica para Líderes · CHM Minería × Uninorte CEC</p>
 </footer>
- 
+
 <script>
+// ══════════════════════════════════════════════════════
+//  CONFIGURACIÓN — pegar URL del Apps Script aquí
+//  o dejar vacío para que el tallerista la configure
+//  en la pantalla de estadísticas
+// ══════════════════════════════════════════════════════
+var API_URL = '';  // ← pega tu URL aquí si quieres hardcodearla
+
 // ── STATE ──
-const S = { partA: new Array(8).fill(0), partB: [], partC: '' };
-let tInterval = null, tSecs = 180;
- 
-// ── CONTENT: PART A ──
-const QA = [
+var S = { partA: new Array(8).fill(0), partB: [], partC: '' };
+var tInterval = null, tSecs = 180;
+var analysisCache = {};
+var allResponses = [];
+
+// ── DATA ──
+var QA = [
   "Antes de escribir un texto importante, tengo claro el objetivo y la audiencia.",
   "Mis correos suelen quedar más largos de lo que quisiera.",
   "Uso estructura clara (apertura, desarrollo, cierre) en mis informes.",
@@ -375,426 +414,497 @@ const QA = [
   "Me siento seguro/a redactando propuestas o comunicados de alto impacto.",
   "Sé identificar y corregir el uso excesivo de voz pasiva en mis textos."
 ];
-const QA_S = ["Claridad de objetivo","Control de extensión","Estructura en informes","Adaptación de tono","Retroalimentación","Revisión previa","Seguridad en propuestas","Detección de voz pasiva"];
- 
-// ── CONTENT: PART B ──
-const OB = [
-  { t:"La idea principal aparece al final del párrafo", ok:true, exp:"La conclusión (cambio de horarios) aparece en la última línea. Debería ser la primera oración." },
-  { t:"La oración es demasiado larga y difícil de seguir", ok:true, exp:"La oración tiene 93 palabras. El límite recomendado es 25 palabras por oración." },
-  { t:"Hay redundancias evidentes en el texto", ok:true, exp:"'Proceso que se viene adelantando' puede decirse simplemente 'proceso'. Hay más ejemplos similares." },
-  { t:"El lenguaje es excesivamente formal y rígido", ok:true, exp:"Frases como 'en el marco del proceso de mejoramiento continuo' son eco corporativo que no aporta información." },
-  { t:"No hay una acción clara para el lector", ok:true, exp:"El lector no sabe qué debe hacer: ¿confirmar asistencia? ¿actualizar su agenda? ¿consultar con alguien?" },
-  { t:"No veo ningún problema con este párrafo", ok:false, exp:"Este párrafo concentra los 5 vicios principales que se trabajan en el taller." }
+var QA_S = ["Claridad de objetivo","Control de extensión","Estructura en informes","Adaptación de tono","Retroalimentación","Revisión previa","Seguridad en propuestas","Detección de voz pasiva"];
+var OB = [
+  { t:"La idea principal aparece al final del párrafo", ok:true, exp:"La conclusión (cambio de horarios) está en la última línea. Debería ser la primera oración." },
+  { t:"La oración es demasiado larga y difícil de seguir", ok:true, exp:"La oración tiene 93 palabras. El límite recomendado es 25 palabras." },
+  { t:"Hay redundancias evidentes en el texto", ok:true, exp:"'Proceso que se viene adelantando' puede decirse simplemente 'proceso'." },
+  { t:"El lenguaje es excesivamente formal y rígido", ok:true, exp:"'En el marco del proceso de mejoramiento continuo' es eco corporativo que no aporta información." },
+  { t:"No hay una acción clara para el lector", ok:true, exp:"El lector no sabe qué debe hacer: ¿confirmar asistencia? ¿actualizar agenda?" },
+  { t:"No veo ningún problema con este párrafo", ok:false, exp:"Este párrafo concentra los 5 vicios principales del taller." }
 ];
- 
-// ── WRITING ANALYZER ──
-function analyzeWriting(text) {
-  if (!text || text.trim().length < 5) return { problems:[], strengths:[], completeness:[], wordCount:0, empty:true };
- 
-  const tl = text.toLowerCase();
-  const words = text.trim().split(/\s+/);
-  const wc = words.length;
-  const sentences = text.split(/[.!?]+/).map(s=>s.trim()).filter(s=>s.split(/\s+/).length > 2);
-  const problems = [], strengths = [];
- 
-  // 1. Idea al final — ¿está la info clave en las primeras palabras?
-  const first40 = tl.split(/\s+/).slice(0,40).join(' ');
-  const keyInFirst = /jueves|se adelanta|cambio|nuevo horario|reunión|reunion|meeting|para informar|les comun|aviso/.test(first40);
-  if (!keyInFirst && wc > 15) {
-    problems.push({ label:'Idea al final', icon:'ti-sort-descending-letters', exp:'La información principal (la reunión se adelanta) no aparece en las primeras palabras. Aplicar la pirámide invertida: conclusión primero.' });
-  } else if (keyInFirst) {
-    strengths.push({ label:'Información principal al inicio', icon:'ti-sort-ascending-letters', exp:'El mensaje empieza con la noticia relevante, respetando la pirámide invertida.' });
-  }
- 
-  // 2. Oraciones largas
-  const longSents = sentences.filter(s => s.split(/\s+/).length > 25);
-  if (longSents.length > 0) {
-    problems.push({ label:'Oraciones largas', icon:'ti-align-justified', exp:`${longSents.length} oración(es) superan las 25 palabras. Cada idea merece su propio punto. La más larga: "${longSents[0].split(/\s+/).slice(0,10).join(' ')}…"` });
-  } else if (sentences.length > 0) {
-    strengths.push({ label:'Oraciones concisas', icon:'ti-align-left', exp:'Todas las oraciones tienen una extensión apropiada (menos de 25 palabras).' });
-  }
- 
-  // 3. Voz pasiva
-  const passivePat = /\b(fue|fueron|ha sido|han sido|será comunicad|serán comunicad|se ha inform|se informa|se comunica|se hace saber|se notifica|queda (aplazad|pospu|adelantad)|es necesario comunicar)\b/i;
-  if (passivePat.test(text)) {
-    const m = text.match(passivePat);
-    problems.push({ label:'Voz pasiva', icon:'ti-arrows-left-right', exp:`Patrón de voz pasiva detectado ("${m[0]}"). Prefiere la voz activa: "la reunión cambia al jueves" en lugar de "se informa que la reunión ha sido modificada".` });
-  }
- 
-  // 4. Gerundismo
-  const gerPat = /\b\w+(?:ando|iendo)\b/gi;
-  const gers = (text.match(gerPat) || []).filter(g => !/siendo|pudiendo|sabiendo|teniendo\s+en/i.test(g));
-  if (gers.length >= 2) {
-    problems.push({ label:'Gerundismo', icon:'ti-letter-g', exp:`Se detectaron varios gerundios (${[...new Set(gers)].slice(0,3).join(', ')}). Verifica que no reemplacen verbos conjugados. Prefiere: "cambia" en lugar de "cambiando".` });
-  }
- 
-  // 5. Lenguaje corporativo vacío
-  const emptyPhrases = ['por medio de la presente','sirva el presente','me permito informar','mediante la presente','en atención a','a través de la presente','de conformidad con','a la brevedad posible','en el día de hoy','en el momento actual','me es grato','me es gratar','tengo el agrado'];
-  const foundEmpty = emptyPhrases.filter(p => tl.includes(p));
-  if (foundEmpty.length > 0) {
-    problems.push({ label:'Lenguaje corporativo vacío', icon:'ti-ghost', exp:`"${foundEmpty[0]}" no aporta información al lector. Ve directo al punto desde la primera palabra.` });
-  }
- 
-  // 6. Redundancias frecuentes
-  const redundant = ['en el día de hoy','a la brevedad posible','colaborar juntos','primera prioridad','subir hacia arriba','bajar hacia abajo','actualmente en la actualidad','consenso de todos','planear con anticipación','resultado final'];
-  const foundR = redundant.filter(p => tl.includes(p));
-  if (foundR.length > 0) {
-    problems.push({ label:'Redundancia', icon:'ti-copy', exp:`"${foundR[0]}" repite información: una de las dos palabras sobra. Elimínala.` });
-  }
- 
-  // 7. Extensión apropiada
-  if (wc > 100) {
-    problems.push({ label:'Texto demasiado extenso', icon:'ti-text-increase', exp:`${wc} palabras para un mensaje interno que puede transmitirse en 40–60. Cada palabra que sobre le roba tiempo al lector.` });
-  } else if (wc >= 20 && wc <= 80) {
-    strengths.push({ label:`Extensión apropiada (${wc} palabras)`, icon:'ti-ruler', exp:'La extensión es adecuada para un mensaje interno de este tipo.' });
-  } else if (wc < 20 && wc > 5) {
-    problems.push({ label:'Texto muy breve', icon:'ti-text-decrease', exp:`Solo ${wc} palabras. El mensaje puede carecer de la información necesaria para que el lector actúe.` });
-  }
- 
-  // 8. Llamado a la acción
-  const hasCTA = /confirma|confirmar|por favor|favor|actualiza|actualizar|agenda|tener en cuenta|cuenten con|te pido|les pido|cualquier (duda|pregunta)|escrib|contáct|comuníc/i.test(text);
-  if (!hasCTA) {
-    problems.push({ label:'Sin llamado a la acción', icon:'ti-hand-finger', exp:'El mensaje no indica qué debe hacer el lector (confirmar asistencia, actualizar agenda, responder si hay inconveniente, etc.).' });
-  } else {
-    strengths.push({ label:'Llamado a la acción presente', icon:'ti-hand-finger', exp:'El mensaje indica claramente qué se espera del lector.' });
-  }
- 
-  // 9. Completeness check
-  const hasDay   = /jueves|thursday|\bjuev\.?\b/i.test(text);
-  const hasTime  = /3[\s:]?p\.?\s?m\.?|15[\s:h.]?00|tres de la tarde|3:00|3\.00 p/i.test(text);
-  const hasReason= /director|viernes|friday|viaj[ae]/i.test(text);
-  const completeness = [
-    { label:'Nuevo día mencionado (jueves)', present:hasDay, val: hasDay ? 'Sí' : 'No encontrado' },
-    { label:'Nueva hora mencionada (3:00 p.m.)', present:hasTime, val: hasTime ? 'Sí' : 'No encontrada' },
-    { label:'Motivo del cambio explicado', present:hasReason, val: hasReason ? 'Sí' : 'No encontrado' }
-  ];
-  const infoComplete = hasDay && hasTime && hasReason;
-  if (infoComplete) {
-    strengths.push({ label:'Información completa', icon:'ti-list-check', exp:'El mensaje incluye el nuevo día, la hora y el motivo del cambio.' });
-  }
- 
-  return { problems, strengths, completeness, wordCount:wc };
+var PROB_LABELS = {
+  IDEA_AL_FINAL:'idea al final', ORACION_LARGA:'oración larga',
+  REDUNDANCIA:'redundancia', GERUNDISMO:'gerundismo',
+  VOZ_PASIVA:'voz pasiva', LENGUAJE_VACIO:'lenguaje vacío',
+  SIN_ACCION:'sin acción clara', AMBIGUEDAD:'ambigüedad', TEXTO_LARGO:'texto extenso'
+};
+
+// ── API HELPERS ──
+function getApiUrl() {
+  if (API_URL) return API_URL;
+  try { return localStorage.getItem('api_url') || ''; } catch(e) { return ''; }
 }
- 
-function renderAnalysis(result, container) {
-  if (result.empty) {
-    container.innerHTML = '<p style="font-size:13px;color:var(--muted)">No escribiste texto para analizar.</p>';
+function setApiUrl(url) {
+  API_URL = url;
+  try { localStorage.setItem('api_url', url); } catch(e){}
+}
+function saveApiUrl() {
+  var val = document.getElementById('api-url-input').value.trim();
+  if (!val || !val.startsWith('http')) {
+    alert('Por favor ingresa una URL válida del Apps Script.'); return;
+  }
+  setApiUrl(val);
+  loadStats();
+}
+function changeApiUrl() {
+  var url = getApiUrl();
+  document.getElementById('api-url-input').value = url;
+  document.getElementById('stats-setup').style.display = 'block';
+  document.getElementById('stats-dashboard').style.display = 'none';
+}
+
+async function enviarRespuesta(datos) {
+  var url = getApiUrl();
+  if (!url) return false;
+  try {
+    await fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(datos)
+    });
+    return true;
+  } catch(e) { return false; }
+}
+
+async function cargarResultados() {
+  var url = getApiUrl();
+  if (!url) return null;
+  var res = await fetch(url + '?accion=resultados');
+  if (!res.ok) throw new Error('Error ' + res.status);
+  return await res.json();
+}
+
+// ── NAV ──
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+  document.querySelectorAll('.nbtn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('screen-'+id).classList.add('active');
+  var map = {home:0, diag:1, stats:2, prompts:3};
+  var btns = document.querySelectorAll('.nbtn');
+  if (btns[map[id]]) btns[map[id]].classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+  if (id === 'stats') initStats();
+}
+
+// ── STATS INIT ──
+function initStats() {
+  var url = getApiUrl();
+  var setup = document.getElementById('stats-setup');
+  var dash = document.getElementById('stats-dashboard');
+  if (!url) {
+    setup.style.display = 'block';
+    dash.style.display = 'none';
+  } else {
+    setup.style.display = 'none';
+    dash.style.display = 'block';
+    loadStats();
+  }
+}
+
+async function loadStats() {
+  var loading = document.getElementById('stats-loading');
+  var empty = document.getElementById('stats-empty');
+  var content = document.getElementById('stats-content');
+  loading.style.display = 'block';
+  empty.style.display = 'none';
+  content.style.display = 'none';
+
+  try {
+    var result = await cargarResultados();
+    loading.style.display = 'none';
+
+    if (!result || result.total === 0) {
+      empty.style.display = 'block'; return;
+    }
+
+    allResponses = result.respuestas;
+    content.style.display = 'block';
+    renderStats(allResponses);
+  } catch(e) {
+    loading.innerHTML = '<div class="info-box ib-c" style="text-align:left"><i class="ti ti-alert-circle" aria-hidden="true"></i><div><strong>Error al cargar</strong><br><span style="font-size:12px">' + e.message + '</span></div></div>';
+  }
+}
+
+function renderStats(responses) {
+  var n = responses.length;
+  // Metrics
+  var writings = responses.filter(function(r){ return r.partC && r.partC.trim().length > 10; });
+  document.getElementById('stat-metrics').innerHTML =
+    '<div class="metric-card"><div class="metric-val">'+n+'</div><div class="metric-lbl">Respuestas recibidas</div></div>' +
+    '<div class="metric-card"><div class="metric-val">'+writings.length+'</div><div class="metric-lbl">Escrituras completadas</div></div>' +
+    '<div class="metric-card"><div class="metric-val">'+responses.filter(function(r){return (r.partB||[]).includes(5);}).length+'</div><div class="metric-lbl">"No ven el problema"</div></div>';
+
+  // Part A
+  var partAEl = document.getElementById('stat-partA');
+  partAEl.innerHTML = '';
+  for (var i=0; i<8; i++) {
+    var vals = responses.map(function(r){ return (r.partA||[])[i]||0; }).filter(function(v){ return v>0; });
+    var avg = vals.length ? vals.reduce(function(a,b){return a+b;},0)/vals.length : 0;
+    var pct = Math.round((avg/5)*100);
+    var col = avg>=4?'#1D9E75':avg>=3?'#BA7517':avg>0?'#D85A30':'#ccc';
+    partAEl.innerHTML += '<div class="stat-row"><span class="slbl">'+QA_S[i]+'</span><div class="sbg"><div class="sfill" style="width:'+pct+'%;background:'+col+'"><span class="sval">'+avg.toFixed(1)+'</span></div></div><span class="sext">/5</span></div>';
+  }
+
+  // Part B
+  var partBEl = document.getElementById('stat-partB');
+  partBEl.innerHTML = '';
+  var bCounts = new Array(OB.length).fill(0);
+  responses.forEach(function(r){ (r.partB||[]).forEach(function(i){ if(i>=0&&i<OB.length) bCounts[i]++; }); });
+  OB.forEach(function(opt, i) {
+    var pct = Math.round((bCounts[i]/n)*100);
+    var fill = opt.ok ? '#1D9E75' : '#D85A30';
+    var ico = opt.ok ? '<i class="ti ti-check" style="font-size:13px;color:var(--green)" aria-hidden="true"></i>' : '';
+    partBEl.innerHTML += '<div class="stat-row"><span class="stat-lbl">'+ico+' '+opt.t+'</span><div class="stat-bg"><div class="stat-fill" style="width:'+pct+'%;background:'+fill+'"><span style="font-size:11px;color:#fff">'+pct+'%</span></div></div><span class="stat-ext">'+bCounts[i]+'/'+n+'</span></div>';
+  });
+
+  // Part C — writing cards
+  var partCEl = document.getElementById('stat-partC');
+  partCEl.innerHTML = '';
+  document.getElementById('btn-analyze').disabled = writings.length === 0;
+
+  if (writings.length === 0) {
+    partCEl.innerHTML = '<p style="font-size:13px;color:var(--muted)">Aún no hay escrituras.</p>';
     return;
   }
- 
-  const pCount = result.problems.length;
-  const sCount = result.strengths.length;
- 
-  // Summary cards
-  let html = `<div class="analysis-summary">
-    <div class="asm-card" style="border-color:${pCount===0?'var(--green-brd)':pCount<=2?'var(--amber-brd)':'var(--coral-brd)'}">
-      <div class="asm-num" style="color:${pCount===0?'var(--green)':pCount<=2?'var(--amber)':'var(--coral)'}">${pCount}</div>
-      <div class="asm-lbl">problema${pCount!==1?'s':''} detectado${pCount!==1?'s':''}</div>
-    </div>
-    <div class="asm-card" style="border-color:var(--green-brd)">
-      <div class="asm-num" style="color:var(--green)">${sCount}</div>
-      <div class="asm-lbl">acierto${sCount!==1?'s':''} identificado${sCount!==1?'s':''}</div>
-    </div>
-    <div class="asm-card">
-      <div class="asm-num" style="color:var(--ink)">${result.wordCount}</div>
-      <div class="asm-lbl">palabras</div>
-    </div>
-  </div>`;
- 
-  // Problems
-  if (pCount > 0) {
-    html += `<div class="analysis-section">
-      <div class="as-header">
-        <div class="as-icon" style="background:var(--coral-bg)"><i class="ti ti-alert-triangle" style="font-size:14px;color:var(--coral)" aria-hidden="true"></i></div>
-        <div class="as-title">Para mejorar</div>
-      </div>`;
-    result.problems.forEach(p => {
-      html += `<div class="issue-item problem">
-        <i class="ti ${p.icon} issue-icon" style="color:var(--coral)" aria-hidden="true"></i>
-        <div class="issue-content">
-          <div class="issue-label p">${p.label}</div>
-          <div class="issue-exp">${p.exp}</div>
-        </div>
-      </div>`;
-    });
-    html += `</div>`;
-  }
- 
-  // Strengths
-  if (sCount > 0) {
-    html += `<div class="analysis-section">
-      <div class="as-header">
-        <div class="as-icon" style="background:var(--green-bg)"><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)" aria-hidden="true"></i></div>
-        <div class="as-title">Lo que funciona</div>
-      </div>`;
-    result.strengths.forEach(s => {
-      html += `<div class="issue-item strength">
-        <i class="ti ${s.icon} issue-icon" style="color:var(--green)" aria-hidden="true"></i>
-        <div class="issue-content">
-          <div class="issue-label s">${s.label}</div>
-          <div class="issue-exp">${s.exp}</div>
-        </div>
-      </div>`;
-    });
-    html += `</div>`;
-  }
- 
-  // Completeness
-  html += `<div class="analysis-section">
-    <div class="as-header">
-      <div class="as-icon" style="background:var(--blue-bg)"><i class="ti ti-checklist" style="font-size:14px;color:var(--blue)" aria-hidden="true"></i></div>
-      <div class="as-title">Información incluida</div>
-    </div>`;
-  result.completeness.forEach(c => {
-    html += `<div class="completeness-row">
-      <div class="comp-check ${c.present?'comp-present':'comp-missing'}">
-        <i class="ti ${c.present?'ti-check':'ti-x'}" aria-hidden="true"></i>
-      </div>
-      <span class="comp-lbl">${c.label}</span>
-      <span class="comp-val">${c.val}</span>
-    </div>`;
+  writings.forEach(function(r, i) {
+    var d = document.createElement('div');
+    d.className = 'writing-card';
+    var ts = new Date(r.ts||Date.now());
+    d.innerHTML = '<div class="writing-meta">Participante '+(i+1)+' · '+ts.toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'})+'</div><div class="writing-text" id="wt'+i+'">'+escHtml(r.partC)+'</div>';
+    partCEl.appendChild(d);
   });
-  html += `</div>`;
- 
-  // Closing note
-  if (pCount === 0) {
-    html += `<div class="issue-item info"><i class="ti ti-sparkles issue-icon" style="color:var(--blue)" aria-hidden="true"></i><div class="issue-content"><div class="issue-label i">Escritura sólida</div><div class="issue-exp">No se detectaron problemas estructurales. Usa el prompt de análisis de IA para una revisión más profunda del estilo y el tono.</div></div></div>`;
+}
+
+// ── AI ANALYSIS OF WRITINGS ──
+var PROB_LABELS_ES = {
+  IDEA_AL_FINAL:'idea al final', ORACION_LARGA:'oración larga', REDUNDANCIA:'redundancia',
+  GERUNDISMO:'gerundismo', VOZ_PASIVA:'voz pasiva', LENGUAJE_VACIO:'lenguaje vacío',
+  SIN_ACCION:'sin acción clara', AMBIGUEDAD:'ambigüedad'
+};
+
+async function runAnalysis() {
+  var btn = document.getElementById('btn-analyze');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span> Analizando...';
+
+  var writings = allResponses.filter(function(r){ return r.partC && r.partC.trim().length > 10; });
+  var probCount = {};
+
+  for (var i=0; i<writings.length; i++) {
+    var card = document.querySelectorAll('.writing-card')[i];
+    if (!card) continue;
+    var aiDiv = card.querySelector('.ai-result');
+    if (!aiDiv) { aiDiv = document.createElement('div'); aiDiv.className = 'ai-result'; card.appendChild(aiDiv); }
+
+    if (analysisCache[i]) {
+      renderAiResult(aiDiv, analysisCache[i]);
+      (analysisCache[i].problemas||[]).forEach(function(p){ probCount[p]=(probCount[p]||0)+1; });
+      continue;
+    }
+
+    aiDiv.innerHTML = '<div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);padding:.4rem 0"><span class="spin-dark" style="display:inline-block"></span> Analizando...</div>';
+
+    var result = await analyzeWithAI(writings[i].partC, i);
+    renderAiResult(aiDiv, result);
+    (result.problemas||[]).forEach(function(p){ probCount[p]=(probCount[p]||0)+1; });
   }
- 
-  container.innerHTML = html;
+
+  renderFreqChart(probCount, writings.length);
+  btn.disabled = false;
+  btn.innerHTML = '<i class="ti ti-sparkles" aria-hidden="true"></i> Re-analizar';
 }
- 
-// ── DIAGNOSTIC FLOW ──
-function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.nbtn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('screen-'+id).classList.add('active');
-  const map={home:0,diag:1,prompts:2};
-  const btns=document.querySelectorAll('.nbtn');
-  if(btns[map[id]]) btns[map[id]].classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+
+async function analyzeWithAI(text, idx) {
+  if (analysisCache[idx]) return analysisCache[idx];
+  var prompt = 'Eres evaluador de redacción corporativa. Analiza este mensaje interno y devuelve SOLO un JSON válido sin backticks ni texto extra:\n{"problemas":["hasta 3 de: IDEA_AL_FINAL|ORACION_LARGA|REDUNDANCIA|GERUNDISMO|VOZ_PASIVA|LENGUAJE_VACIO|SIN_ACCION|AMBIGUEDAD"],"fortaleza":"una fortaleza en máx 8 palabras","sugerencia":"una sugerencia en máx 12 palabras"}\nTexto: "'+text.replace(/"/g,"'")+'"';
+  try {
+    var res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:300, messages:[{role:'user',content:prompt}] })
+    });
+    var data = await res.json();
+    var raw = (data.content||[]).filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
+    var parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
+    analysisCache[idx] = parsed;
+    return parsed;
+  } catch(e) {
+    return { problemas:[], fortaleza:'No se pudo analizar', sugerencia:'Revisa la conexión e intenta de nuevo' };
+  }
 }
- 
+
+function renderAiResult(container, result) {
+  var chips = (result.problemas||[]).map(function(p){
+    return '<span class="chip chip-prob">'+(PROB_LABELS_ES[p]||p)+'</span>';
+  }).join('') || '<span class="chip chip-ok">sin problemas detectados</span>';
+  container.innerHTML =
+    '<div class="ai-row" style="flex-wrap:wrap;align-items:center;gap:4px;margin-bottom:6px"><span class="ai-row-lbl">Problemas</span>'+chips+'</div>' +
+    '<div class="ai-row"><span class="ai-row-lbl">Fortaleza</span><span>'+(result.fortaleza||'—')+'</span></div>' +
+    '<div class="ai-row"><span class="ai-row-lbl">Sugerencia</span><span>'+(result.sugerencia||'—')+'</span></div>';
+}
+
+function renderFreqChart(counts, total) {
+  if (!Object.keys(counts).length) return;
+  var sorted = Object.entries(counts).sort(function(a,b){return b[1]-a[1];});
+  var banner = document.getElementById('agg-banner');
+  var top = sorted[0];
+  banner.innerHTML = '<i class="ti ti-alert-circle" style="font-size:15px;vertical-align:-2px;margin-right:6px" aria-hidden="true"></i>Problema más frecuente: <strong>'+(PROB_LABELS_ES[top[0]]||top[0])+'</strong> — presente en '+top[1]+' de '+total+' escritura'+(total!==1?'s':'')+'.';
+  var chart = document.getElementById('freq-chart');
+  chart.innerHTML = sorted.map(function(kv){
+    var pct = Math.round((kv[1]/total)*100);
+    return '<div class="freq-row"><span class="freq-lbl">'+(PROB_LABELS_ES[kv[0]]||kv[0])+'</span><div class="freq-bg"><div class="freq-fill" style="width:'+pct+'%"><span style="font-size:11px;color:#fff">'+kv[1]+'/'+total+'</span></div></div><span style="font-size:12px;color:var(--muted);margin-left:6px">'+pct+'%</span></div>';
+  }).join('');
+  document.getElementById('agg-section').style.display = 'block';
+}
+
+// ── DIAGNOSTIC ──
 function showStep(s) {
-  ['intro','a','b','c','results'].forEach(k=>{
-    const el=document.getElementById('diag-'+k);
-    if(el) el.style.display=k===s?'block':'none';
+  ['intro','a','b','c','results'].forEach(function(k){
+    var el = document.getElementById('diag-'+k);
+    if(el) el.style.display = k===s?'block':'none';
   });
 }
- 
 function startDiag() { buildA(); showStep('a'); }
- 
+
 function buildA() {
-  const c=document.getElementById('partA-container'); c.innerHTML='';
-  QA.forEach((q,i)=>{
-    const d=document.createElement('div'); d.className='qblock';
-    d.innerHTML=`<div class="qtxt">${i+1}. ${q}</div><div class="lwrap"><span class="llbl">Nunca</span><div class="lopts" id="lk${i}"></div><span class="llbl r">Siempre</span></div>`;
+  var c = document.getElementById('partA-container'); c.innerHTML='';
+  QA.forEach(function(q,i){
+    var d = document.createElement('div'); d.className='qblock';
+    d.innerHTML='<div class="qtxt">'+(i+1)+'. '+q+'</div><div class="lwrap"><span class="llbl">Nunca</span><div class="lopts" id="lk'+i+'"></div><span class="llbl r">Siempre</span></div>';
     c.appendChild(d);
-    const opts=d.querySelector(`#lk${i}`);
-    for(let v=1;v<=5;v++){
-      const btn=document.createElement('button');
-      btn.className='lbtn'+(S.partA[i]===v?' sel':'');
-      btn.textContent=v; btn.setAttribute('aria-label',`${v} de 5 para pregunta ${i+1}`);
-      btn.onclick=()=>{ S.partA[i]=v; opts.querySelectorAll('.lbtn').forEach((b,bi)=>b.classList.toggle('sel',bi+1===v)); };
-      opts.appendChild(btn);
+    var opts = d.querySelector('#lk'+i);
+    for(var v=1;v<=5;v++){
+      (function(val){
+        var btn=document.createElement('button'); btn.className='lbtn'+(S.partA[i]===val?' sel':'');
+        btn.textContent=val; btn.setAttribute('aria-label',val+' de 5 para pregunta '+(i+1));
+        btn.onclick=function(){ S.partA[i]=val; opts.querySelectorAll('.lbtn').forEach(function(b,bi){b.classList.toggle('sel',bi+1===val);}); };
+        opts.appendChild(btn);
+      })(v);
     }
   });
 }
- 
+
 function goToB() { buildB(); showStep('b'); }
- 
 function buildB() {
-  const c=document.getElementById('partB-container'); c.innerHTML='';
-  OB.forEach((o,i)=>{
-    const lbl=document.createElement('label'); lbl.className='cbitem';
-    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=S.partB.includes(i);
-    cb.onchange=()=>{ if(cb.checked){if(!S.partB.includes(i))S.partB.push(i);}else{S.partB=S.partB.filter(x=>x!==i);} };
-    const sp=document.createElement('span'); sp.textContent=o.t;
+  var c = document.getElementById('partB-container'); c.innerHTML='';
+  OB.forEach(function(o,i){
+    var lbl=document.createElement('label'); lbl.className='cbitem';
+    var cb=document.createElement('input'); cb.type='checkbox'; cb.checked=S.partB.includes(i);
+    cb.onchange=function(){ if(cb.checked){if(!S.partB.includes(i))S.partB.push(i);}else{S.partB=S.partB.filter(function(x){return x!==i;});} };
+    var sp=document.createElement('span'); sp.textContent=o.t;
     lbl.appendChild(cb); lbl.appendChild(sp); c.appendChild(lbl);
   });
 }
- 
+
 function goToC() { showStep('c'); startTimer(); }
- 
-function startTimer() {
+function startTimer(){
   tSecs=180; updateTimer(); clearInterval(tInterval);
-  tInterval=setInterval(()=>{ tSecs--; updateTimer(); if(tSecs<=0)clearInterval(tInterval); },1000);
+  tInterval=setInterval(function(){ tSecs--; updateTimer(); if(tSecs<=0)clearInterval(tInterval); },1000);
 }
 function stopTimer(){ clearInterval(tInterval); }
 function updateTimer(){
-  const m=Math.floor(Math.max(tSecs,0)/60), s=Math.max(tSecs,0)%60;
-  const el=document.getElementById('timer-txt');
-  if(el) el.textContent=`${m}:${s.toString().padStart(2,'0')}`;
+  var m=Math.floor(Math.max(tSecs,0)/60), s=Math.max(tSecs,0)%60;
+  var el=document.getElementById('timer-txt');
+  if(el) el.textContent=m+':'+(s<10?'0':'')+s;
 }
- 
-function submitDiag() {
+
+async function submitDiag() {
   stopTimer();
-  S.partC=document.getElementById('partC-text').value.trim();
-  try{ localStorage.setItem('diag_v2',JSON.stringify({...S,ts:Date.now()})); }catch(e){}
+  S.partC = document.getElementById('partC-text').value.trim();
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span> Enviando...';
+
+  var datos = { partA:S.partA, partB:S.partB, partC:S.partC, ts:Date.now() };
+  var ok = await enviarRespuesta(datos);
+
+  try{ localStorage.setItem('diag_v2', JSON.stringify(datos)); }catch(e){}
   renderResults();
   showStep('results');
+
+  var status = document.getElementById('save-status');
+  if (ok) {
+    status.textContent = 'Respuesta guardada en Google Sheets ✓';
+    status.style.color = 'var(--teal)';
+  } else if (!getApiUrl()) {
+    status.textContent = 'Resultados guardados en este dispositivo';
+    status.style.color = 'var(--muted)';
+  } else {
+    status.textContent = 'Respuesta guardada localmente';
+    status.style.color = 'var(--amber)';
+  }
 }
- 
+
 function renderResults() {
   // Part A
-  const ra=document.getElementById('res-a'); ra.innerHTML='';
-  QA_S.forEach((lbl,i)=>{
-    const v=S.partA[i]||0, pct=v?Math.round((v/5)*100):0;
-    const col=v>=4?'#1D9E75':v>=3?'#BA7517':v>0?'#D85A30':'#ccc';
-    const row=document.createElement('div'); row.className='srow';
-    row.innerHTML=`<span class="slbl">${lbl}</span><div class="sbg"><div class="sfill" style="width:${pct}%;background:${col}"><span class="sval">${v>0?v:''}</span></div></div><span class="sext">${v>0?'/5':'—'}</span>`;
-    ra.appendChild(row);
+  var ra=document.getElementById('res-a'); ra.innerHTML='';
+  QA_S.forEach(function(lbl,i){
+    var v=S.partA[i]||0, pct=v?Math.round((v/5)*100):0;
+    var col=v>=4?'#1D9E75':v>=3?'#BA7517':v>0?'#D85A30':'#ccc';
+    ra.innerHTML+='<div class="srow"><span class="slbl">'+lbl+'</span><div class="sbg"><div class="sfill" style="width:'+pct+'%;background:'+col+'"><span class="sval">'+(v>0?v:'')+'</span></div></div><span class="sext">'+(v>0?'/5':'—')+'</span></div>';
   });
- 
   // Part B
-  const rb=document.getElementById('res-b'), rbE=document.getElementById('res-b-exp');
+  var rb=document.getElementById('res-b'), rbE=document.getElementById('res-b-exp');
   rb.innerHTML=''; rbE.innerHTML='';
-  let correct=0, missed=[];
-  OB.forEach((o,i)=>{
-    const sel=S.partB.includes(i);
+  var correct=0, missed=[];
+  OB.forEach(function(o,i){
+    var sel=S.partB.includes(i);
     if(o.ok&&sel) correct++;
     else if(o.ok&&!sel) missed.push(i);
   });
-  const wrongSel=S.partB.includes(5);
-  rb.innerHTML=`<p style="font-size:13.5px;color:var(--ink2);margin-bottom:.6rem">Detectaste <strong>${correct} de 5</strong> problemas correctamente.${wrongSel?' Marcaste la opción "No veo ningún problema", que es incorrecta.':''}</p>`;
-  const chips=document.createElement('div');
-  OB.forEach((o,i)=>{
-    const sel=S.partB.includes(i); let cls='',ico='';
+  var wrongSel=S.partB.includes(5);
+  rb.innerHTML='<p style="font-size:13.5px;color:var(--ink2);margin-bottom:.6rem">Detectaste <strong>'+correct+' de 5</strong> problemas.'+(wrongSel?' Marcaste "No veo ningún problema", que es incorrecta.':'')+'</p>';
+  var chips=document.createElement('div');
+  OB.forEach(function(o,i){
+    var sel=S.partB.includes(i); var cls='',ico='';
     if(o.ok&&sel){cls='bchip bchip-ok';ico='<i class="ti ti-check" aria-hidden="true"></i>';}
     else if(!o.ok&&sel){cls='bchip bchip-wrong';ico='<i class="ti ti-x" aria-hidden="true"></i>';}
     else if(o.ok&&!sel){cls='bchip bchip-miss';ico='<i class="ti ti-eye-off" aria-hidden="true"></i>';}
     else return;
-    chips.innerHTML+=`<span class="${cls}">${ico} ${o.t}</span>`;
+    chips.innerHTML+='<span class="'+cls+'">'+ico+' '+o.t+'</span>';
   });
   rb.appendChild(chips);
   if(missed.length>0){
     rbE.innerHTML='<div style="font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px">Errores que no detectaste:</div>';
-    missed.forEach(i=>{ rbE.innerHTML+=`<div style="background:var(--amber-bg);border-radius:var(--rs);padding:.6rem .85rem;margin-bottom:5px;font-size:12.5px;color:var(--amber-dk);line-height:1.5"><strong>${OB[i].t}</strong> — ${OB[i].exp}</div>`; });
+    missed.forEach(function(i){ rbE.innerHTML+='<div style="background:var(--amber-bg);border-radius:var(--rs);padding:.6rem .85rem;margin-bottom:5px;font-size:12.5px;color:var(--amber-dk);line-height:1.5"><strong>'+OB[i].t+'</strong> — '+OB[i].exp+'</div>'; });
   }
- 
-  // Part C — text display
+  // Part C text
   document.getElementById('res-c-text').textContent = S.partC || '(no escribiste texto)';
- 
-  // Part C — automatic analysis
-  const analysis = analyzeWriting(S.partC);
-  renderAnalysis(analysis, document.getElementById('res-c-analysis'));
- 
-  // Part C — AI prompt
-  const prompt = `Actúa como consultor de comunicación corporativa en español. Analiza el siguiente mensaje interno escrito en un taller de redacción ejecutiva. Dame: (1) las dos fortalezas más concretas, (2) los tres problemas más urgentes a corregir (usa estas categorías si aplican: idea al final, oración larga, redundancia, gerundismo, voz pasiva, lenguaje vacío, sin acción clara, ambigüedad), (3) una versión reescrita del mensaje completo. Sé directo y específico.\n\nTexto: "${S.partC||'[sin texto]'}"`;
+  // Part C analysis
+  renderLocalAnalysis(S.partC, document.getElementById('res-c-analysis'));
+  // Prompt
+  var prompt='Actúa como consultor de comunicación corporativa. Analiza el siguiente mensaje interno: (1) dos fortalezas concretas, (2) tres problemas urgentes usando estas categorías si aplican: idea al final, oración larga, redundancia, gerundismo, voz pasiva, lenguaje vacío, sin acción clara, ambigüedad, (3) versión reescrita del mensaje completo. Sé directo.\n\nTexto: "'+((S.partC||'[sin texto]').replace(/"/g,"'"))+'"';
   document.getElementById('res-c-prompt').textContent = prompt;
 }
- 
-function copyPmt() {
-  const t=document.getElementById('res-c-prompt').textContent;
-  const btn=document.getElementById('copy-pmt-btn');
-  navigator.clipboard.writeText(t).then(()=>{
+
+// ── LOCAL HEURISTIC ANALYZER ──
+function renderLocalAnalysis(text, container) {
+  if (!text || text.trim().length < 5) {
+    container.innerHTML='<p style="font-size:13px;color:var(--muted)">No hay texto para analizar.</p>'; return;
+  }
+  var tl=text.toLowerCase(), words=text.trim().split(/\s+/), wc=words.length;
+  var sentences=text.split(/[.!?]+/).map(function(s){return s.trim();}).filter(function(s){return s.split(/\s+/).length>2;});
+  var problems=[], strengths=[];
+
+  var first40=tl.split(/\s+/).slice(0,40).join(' ');
+  var keyFirst=/jueves|se adelanta|cambio|reunión|reunion|les informo|les comunico|aviso/.test(first40);
+  if(!keyFirst&&wc>15) problems.push({label:'Idea al final',ico:'ti-sort-descending-letters',exp:'La información clave no aparece en las primeras palabras. Aplicar la pirámide invertida: conclusión primero.'});
+  else if(keyFirst) strengths.push({label:'Información principal al inicio',ico:'ti-sort-ascending-letters',exp:'El mensaje empieza con la noticia relevante, respetando la pirámide invertida.'});
+
+  var longS=sentences.filter(function(s){return s.split(/\s+/).length>25;});
+  if(longS.length>0) problems.push({label:'Oración larga',ico:'ti-align-justified',exp:longS.length+' oración(es) con más de 25 palabras. Ejemplo: "'+longS[0].split(/\s+/).slice(0,8).join(' ')+'…"'});
+  else if(sentences.length>0) strengths.push({label:'Oraciones concisas',ico:'ti-align-left',exp:'Todas las oraciones tienen una extensión apropiada.'});
+
+  if(/\b(fue|fueron|ha sido|han sido|se informa|se comunica|se notifica|queda aplazad|queda adelantad)\b/i.test(text))
+    problems.push({label:'Voz pasiva',ico:'ti-arrows-left-right',exp:'Patrón de voz pasiva detectado. Prefiere la voz activa: "la reunión cambia" en lugar de "la reunión ha sido modificada".'});
+
+  var gers=(text.match(/\b\w+(?:ando|iendo)\b/gi)||[]);
+  if(gers.length>=2) problems.push({label:'Gerundismo',ico:'ti-letter-g',exp:'Varios gerundios ('+[...new Set(gers)].slice(0,3).join(', ')+'). Verifica que no reemplacen verbos conjugados.'});
+
+  var empty=['por medio de la presente','sirva el presente','me permito informar','mediante la presente','en atención a','a través de la presente','me es grato','tengo el agrado'];
+  var fe=empty.filter(function(p){return tl.includes(p);});
+  if(fe.length) problems.push({label:'Lenguaje vacío',ico:'ti-ghost',exp:'"'+fe[0]+'" no aporta información. Ve directo al punto.'});
+
+  ['en el día de hoy','a la brevedad posible','colaborar juntos','primera prioridad','subir hacia arriba'].forEach(function(r){
+    if(tl.includes(r)) problems.push({label:'Redundancia',ico:'ti-copy',exp:'"'+r+'" repite información innecesariamente.'});
+  });
+
+  if(wc>100) problems.push({label:'Texto extenso',ico:'ti-text-increase',exp:wc+' palabras para un mensaje que cabe en 40–60. Reduce.'});
+  else if(wc>=20&&wc<=80) strengths.push({label:'Extensión apropiada ('+wc+' palabras)',ico:'ti-ruler',exp:'Extensión adecuada para un mensaje interno.'});
+
+  var hasCTA=/confirma|confirmar|por favor|actualiza|actualizar|agenda|tener en cuenta|cualquier duda|contáct|comuníc/i.test(text);
+  if(!hasCTA) problems.push({label:'Sin llamado a la acción',ico:'ti-hand-finger',exp:'El mensaje no indica qué debe hacer el lector (confirmar asistencia, actualizar agenda, etc.).'});
+  else strengths.push({label:'Llamado a la acción presente',ico:'ti-hand-finger',exp:'El mensaje indica claramente qué se espera del lector.'});
+
+  var hasDay=/jueves|\bjuev\.?\b/i.test(text);
+  var hasTime=/3[\s:]?p\.?\s?m\.?|15[\s:h.]?00|tres de la tarde|3:00/i.test(text);
+  var hasReason=/director|viernes|viaj[ae]/i.test(text);
+  var completeness=[
+    {label:'Nuevo día mencionado (jueves)', present:hasDay, val:hasDay?'Sí':'No encontrado'},
+    {label:'Nueva hora mencionada (3:00 p.m.)', present:hasTime, val:hasTime?'Sí':'No encontrada'},
+    {label:'Motivo del cambio explicado', present:hasReason, val:hasReason?'Sí':'No encontrado'}
+  ];
+  if(hasDay&&hasTime&&hasReason) strengths.push({label:'Información completa',ico:'ti-list-check',exp:'Incluye el nuevo día, la hora y el motivo del cambio.'});
+
+  // Render
+  var pCount=problems.length, sCount=strengths.length;
+  var col=pCount===0?'var(--green)':pCount<=2?'var(--amber)':'var(--coral)';
+  var bCol=pCount===0?'var(--green-brd)':pCount<=2?'var(--amber-brd)':'var(--coral-brd)';
+  var html='<div class="analysis-summary">' +
+    '<div class="asm-card" style="border-color:'+bCol+'"><div class="asm-num" style="color:'+col+'">'+pCount+'</div><div class="asm-lbl">problema'+(pCount!==1?'s':'')+' detectado'+(pCount!==1?'s':'')+'</div></div>' +
+    '<div class="asm-card" style="border-color:var(--green-brd)"><div class="asm-num" style="color:var(--green)">'+sCount+'</div><div class="asm-lbl">acierto'+(sCount!==1?'s':'')+' identificado'+(sCount!==1?'s':'')+'</div></div>' +
+    '<div class="asm-card"><div class="asm-num">'+wc+'</div><div class="asm-lbl">palabras</div></div>' +
+    '</div>';
+
+  if(pCount>0){
+    html+='<div class="analysis-section"><div class="as-header"><div class="as-icon" style="background:var(--coral-bg)"><i class="ti ti-alert-triangle" style="font-size:14px;color:var(--coral)" aria-hidden="true"></i></div><div class="as-title">Para mejorar</div></div>';
+    problems.forEach(function(p){ html+='<div class="issue-item problem"><i class="ti '+p.ico+' issue-icon" style="color:var(--coral)" aria-hidden="true"></i><div><div class="issue-label p">'+p.label+'</div><div class="issue-exp">'+p.exp+'</div></div></div>'; });
+    html+='</div>';
+  }
+  if(sCount>0){
+    html+='<div class="analysis-section"><div class="as-header"><div class="as-icon" style="background:var(--green-bg)"><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)" aria-hidden="true"></i></div><div class="as-title">Lo que funciona</div></div>';
+    strengths.forEach(function(s){ html+='<div class="issue-item strength"><i class="ti '+s.ico+' issue-icon" style="color:var(--green)" aria-hidden="true"></i><div><div class="issue-label s">'+s.label+'</div><div class="issue-exp">'+s.exp+'</div></div></div>'; });
+    html+='</div>';
+  }
+  html+='<div class="analysis-section"><div class="as-header"><div class="as-icon" style="background:var(--blue-bg)"><i class="ti ti-checklist" style="font-size:14px;color:var(--blue)" aria-hidden="true"></i></div><div class="as-title">Información incluida</div></div>';
+  completeness.forEach(function(c){ html+='<div class="comp-row"><div class="comp-check '+(c.present?'comp-yes':'comp-no')+'"><i class="ti '+(c.present?'ti-check':'ti-x')+'" aria-hidden="true"></i></div><span class="comp-lbl">'+c.label+'</span><span class="comp-val">'+c.val+'</span></div>'; });
+  html+='</div>';
+  container.innerHTML=html;
+}
+
+function copyPmt(){
+  var t=document.getElementById('res-c-prompt').textContent;
+  var btn=document.getElementById('copy-pmt-btn');
+  navigator.clipboard.writeText(t).then(function(){
     btn.classList.add('done'); btn.innerHTML='<i class="ti ti-check" aria-hidden="true"></i>¡Copiado!';
-    setTimeout(()=>{ btn.classList.remove('done'); btn.innerHTML='<i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt'; },2500);
+    setTimeout(function(){ btn.classList.remove('done'); btn.innerHTML='<i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt'; },2500);
   });
 }
- 
-function resetDiag() {
+
+function resetDiag(){
   S.partA.fill(0); S.partB=[]; S.partC='';
   document.getElementById('partC-text').value='';
   showStep('intro');
 }
- 
-// ── PROMPTS LIBRARY ──
-const PROMPTS = [
-  { sess:"Diagnóstico inicial", sc:"bt", ico:"ti-stethoscope",
-    ttl:"Diagnóstico de texto propio",
-    dsc:"Obtén un diagnóstico rápido y estructurado de cualquier texto tuyo antes de editarlo.",
-    when:"Antes de editar un texto importante. Funciona con correos, informes, propuestas o comunicados.",
-    tip:"Pega un texto real que hayas escrito recientemente. No corrijas nada antes de pasarlo — la honestidad con el punto de partida hace el diagnóstico más útil.",
-    prompt:`Actúa como consultor de comunicación corporativa en español. Analiza el siguiente texto y dame un diagnóstico breve con: (1) máximo dos fortalezas concretas, (2) los tres problemas de redacción más urgentes a corregir, (3) la primera oración reescrita con mejor estructura. Sé directo y usa lenguaje simple.
- 
-Texto: [PEGA AQUÍ TU TEXTO]`
-  },
-  { sess:"Sesión 1", sc:"bb", ico:"ti-eye",
-    ttl:"Espejo de reescritura",
-    dsc:"Evalúa la calidad de un texto que ya editaste con criterios específicos y una nota por dimensión.",
-    when:"Después de reescribir manualmente un párrafo en clase. Compara la evaluación de la IA con la de tu compañero de pareja.",
-    tip:"Úsalo DESPUÉS de editar tú mismo, no antes. El valor está en la comparación. Si la IA y tu compañero coinciden, tienes evidencia fuerte.",
-    prompt:`Actúa como editor corporativo senior. Evalúa este párrafo ejecutivo según tres criterios: (1) Claridad estructural [nota 1-10], (2) Economía del lenguaje [nota 1-10], (3) Orientación al lector [nota 1-10]. Para cada criterio, da la nota y una observación de una sola oración. Sé preciso, no condescendiente.
- 
-Párrafo: [PEGA AQUÍ TU PÁRRAFO REESCRITO]`
-  },
-  { sess:"Sesión 2", sc:"bc", ico:"ti-scissors",
-    ttl:"Edición crítica sin perder la voz",
-    dsc:"Elimina los 4 enemigos de la claridad sin perder tu tono ni intención original.",
-    when:"En el taller de edición de correos. También útil después del taller para cualquier texto que sientas 'pesado' o que tardas mucho en redactar.",
-    tip:"Pide siempre que explique qué cambió y por qué. Evalúa cada sugerencia: ¿preserva exactamente lo que querías decir? No aceptes cambios que distorsionen tu intención.",
-    prompt:`Actúa como editor de comunicación corporativa en español. Edita el siguiente texto para: (1) eliminar redundancias evidentes, (2) convertir la voz pasiva a activa donde mejore la claridad, (3) partir oraciones de más de 25 palabras, (4) eliminar adverbios innecesarios. IMPORTANTE: conserva el tono y la intención original del autor. Al final, muéstrame los cambios específicos que hiciste y el porcentaje de reducción de palabras.
- 
-Texto: [PEGA AQUÍ TU CORREO O PÁRRAFO]`
-  },
-  { sess:"Sesión 3", sc:"ba", ico:"ti-layout-grid",
-    ttl:"Andamiaje estructural",
-    dsc:"La IA genera solo el esquema de tu documento. Tú construyes el contenido con tu propio conocimiento del contexto.",
-    when:"Al empezar un informe, propuesta o comunicado desde cero. Especialmente útil cuando no sabes por dónde empezar.",
-    tip:"NUNCA le pidas que escriba el contenido en este paso. El valor está en que el esquema te libera para pensar en QUÉ decir, no en cómo organizarlo.",
-    prompt:`Soy [CARGO] en [EMPRESA]. Necesito escribir un [informe de gestión / propuesta ejecutiva / comunicado interno] sobre [TEMA]. El lector principal es [PERFIL Y JERARQUÍA]. El objetivo es que el lector [ACCIÓN ESPERADA CONCRETA].
- 
-Ayúdame a construir SOLO el esquema de secciones con una línea de descripción de qué debe ir en cada una. NO redactes el contenido todavía. Solo la arquitectura del documento.`
-  },
-  { sess:"Sesión 4", sc:"bb", ico:"ti-arrows-split-2",
-    ttl:"A/B testing de tono",
-    dsc:"Genera dos versiones del mismo mensaje con tonos distintos para que elijas la que mejor refleja tu voz y tu objetivo.",
-    when:"Cuando no estás seguro del tono para un mensaje delicado, persuasivo o de alto impacto.",
-    tip:"Después de recibir las dos versiones, pregúntate: ¿cuál suena más a mí? ¿cuál logra mejor el objetivo? Puedes mezclar elementos de ambas — eso es exactamente lo que debe pasar.",
-    prompt:`Tengo este mensaje que quiero enviar a [PERFIL DEL LECTOR] para lograr [OBJETIVO CONCRETO]. Dame dos versiones: una más directiva (va al punto, afirma con seguridad) y una más consultiva (invita, genera diálogo). Para cada versión, dime en una oración qué prioriza y qué sacrifica.
- 
-Mensaje original: [PEGA TU TEXTO]`
-  },
-  { sess:"Uso diario", sc:"bg", ico:"ti-checklist",
-    ttl:"Verificación final del lector",
-    dsc:"Lee tu texto como un ejecutivo con 30 segundos y detecta qué faltó, qué sobró y qué fue más difícil de entender.",
-    when:"Antes de enviar cualquier correo, informe o comunicado importante. Es el último filtro antes de pulsar 'enviar'.",
-    tip:"Si la IA no puede responder '¿qué se supone que debes hacer después de leerlo?' con claridad, reescribe el cierre antes de enviar.",
-    prompt:`Lee este texto como si fueras un ejecutivo que tiene 30 segundos disponibles. Al terminar, responde: (1) ¿Qué se supone que debes hacer después de leerlo? (2) ¿Qué información faltó o sobró? (3) ¿Qué oración fue más difícil de entender y cómo la mejorarías en una línea?
- 
-Texto: [PEGA TU TEXTO]`
-  }
+
+function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ── PROMPTS ──
+var PROMPTS = [
+  {sess:"Diagnóstico inicial",sc:"bt",ico:"ti-stethoscope",ttl:"Diagnóstico de texto propio",dsc:"Diagnóstico rápido y estructurado de cualquier texto antes de editarlo.",when:"Antes de editar un texto importante. Funciona con correos, informes, propuestas o comunicados.",tip:"Pega un texto real. No corrijas nada antes — la honestidad con el punto de partida hace el diagnóstico más útil.",prompt:"Actúa como consultor de comunicación corporativa en español. Analiza el siguiente texto y dame: (1) máximo dos fortalezas concretas, (2) los tres problemas de redacción más urgentes, (3) la primera oración reescrita. Sé directo.\n\nTexto: [PEGA AQUÍ TU TEXTO]"},
+  {sess:"Sesión 1",sc:"bb",ico:"ti-eye",ttl:"Espejo de reescritura",dsc:"Evalúa la calidad de un texto que ya editaste con criterios específicos y nota por dimensión.",when:"Después de reescribir manualmente un párrafo. Compara la evaluación de la IA con la de tu compañero.",tip:"Úsalo DESPUÉS de editar tú mismo. El valor está en la comparación, no en delegar.",prompt:"Actúa como editor corporativo senior. Evalúa este párrafo según tres criterios: (1) Claridad estructural [nota 1-10], (2) Economía del lenguaje [nota 1-10], (3) Orientación al lector [nota 1-10]. Para cada uno, da la nota y una observación breve. Sé preciso.\n\nPárrafo: [PEGA AQUÍ TU PÁRRAFO REESCRITO]"},
+  {sess:"Sesión 2",sc:"bc",ico:"ti-scissors",ttl:"Edición crítica sin perder la voz",dsc:"Elimina los 4 enemigos de la claridad sin perder tu tono ni intención original.",when:"En el taller de edición de correos. También para cualquier texto que sientas 'pesado'.",tip:"Pide que explique qué cambió y por qué. Evalúa cada sugerencia: ¿preserva lo que querías decir?",prompt:"Actúa como editor de comunicación corporativa. Edita el siguiente texto: (1) elimina redundancias, (2) convierte voz pasiva a activa donde mejore la claridad, (3) parte oraciones de más de 25 palabras, (4) elimina adverbios innecesarios. Conserva el tono original. Muéstrame los cambios y el porcentaje de reducción de palabras.\n\nTexto: [PEGA AQUÍ TU TEXTO]"},
+  {sess:"Sesión 3",sc:"ba",ico:"ti-layout-grid",ttl:"Andamiaje estructural",dsc:"La IA genera solo el esquema de tu documento. Tú construyes el contenido.",when:"Al empezar un informe, propuesta o comunicado desde cero.",tip:"NUNCA le pidas el contenido en este paso. El valor está en que el esquema te libera para pensar qué decir.",prompt:"Soy [CARGO] en [EMPRESA]. Necesito escribir un [informe / propuesta / comunicado] sobre [TEMA]. El lector es [PERFIL]. El objetivo es que [ACCIÓN ESPERADA].\n\nAyúdame a construir SOLO el esquema de secciones con una línea por sección. NO redactes el contenido todavía."},
+  {sess:"Sesión 4",sc:"bb",ico:"ti-arrows-split-2",ttl:"A/B testing de tono",dsc:"Dos versiones del mismo mensaje con tonos distintos para elegir la que mejor refleja tu voz.",when:"Cuando no estás seguro del tono para un mensaje delicado, persuasivo o de alto impacto.",tip:"¿Cuál suena más a mí? ¿Cuál logra mejor el objetivo? Puedes mezclar elementos de ambas.",prompt:"Tengo este mensaje para [PERFIL DEL LECTOR] con el objetivo de [OBJETIVO]. Dame dos versiones: una directiva (al punto, segura) y una consultiva (invita, genera diálogo). Para cada una, dime en una oración qué prioriza y qué sacrifica.\n\nMensaje: [PEGA TU TEXTO]"},
+  {sess:"Uso diario",sc:"bg",ico:"ti-checklist",ttl:"Verificación final del lector",dsc:"Lee tu texto como un ejecutivo con 30 segundos y detecta qué faltó, qué sobró.",when:"Antes de enviar cualquier correo, informe o comunicado importante.",tip:"Si la IA no puede responder '¿qué debes hacer después de leer esto?' con claridad, reescribe el cierre.",prompt:"Lee este texto como un ejecutivo con 30 segundos disponibles. Responde: (1) ¿Qué se supone que debes hacer después de leerlo? (2) ¿Qué información faltó o sobró? (3) ¿Qué oración fue más difícil de entender y cómo la mejorarías?\n\nTexto: [PEGA TU TEXTO]"}
 ];
- 
-function buildPrompts() {
-  const g=document.getElementById('pgrid'); g.innerHTML='';
-  PROMPTS.forEach((p,idx)=>{
-    const card=document.createElement('div'); card.className='pcard';
-    card.innerHTML=`
-      <div class="pcard-hdr">
-        <div class="pcard-sess"><span class="badge ${p.sc}">${p.sess}</span></div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
-          <i class="ti ${p.ico}" style="font-size:18px;color:var(--teal)" aria-hidden="true"></i>
-          <div class="pcard-ttl">${p.ttl}</div>
-        </div>
-        <div class="pcard-dsc">${p.dsc}</div>
-      </div>
-      <div class="pcard-body">
-        <div class="when-row"><i class="ti ti-clock" aria-hidden="true"></i><p><strong>Cuándo usarlo:</strong> ${p.when}</p></div>
-        <div class="plbl">Prompt</div>
-        <div class="pmono" id="pt${idx}">${p.prompt}</div>
-        <div class="copy-row">
-          <button class="btn btn-cp" id="cpb${idx}" onclick="cpPrompt(${idx})" aria-label="Copiar prompt ${p.ttl}"><i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt</button>
-        </div>
-        <div class="tip-row"><i class="ti ti-bulb" aria-hidden="true"></i><p><strong>Tip:</strong> ${p.tip}</p></div>
-      </div>`;
+
+function buildPrompts(){
+  var g=document.getElementById('pgrid'); g.innerHTML='';
+  PROMPTS.forEach(function(p,idx){
+    var card=document.createElement('div'); card.className='pcard';
+    card.innerHTML='<div class="pcard-hdr"><div class="pcard-sess"><span class="badge '+p.sc+'">'+p.sess+'</span></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><i class="ti '+p.ico+'" style="font-size:18px;color:var(--teal)" aria-hidden="true"></i><div class="pcard-ttl">'+p.ttl+'</div></div><div class="pcard-dsc">'+p.dsc+'</div></div><div class="pcard-body"><div class="when-row"><i class="ti ti-clock" aria-hidden="true"></i><p><strong>Cuándo usarlo:</strong> '+p.when+'</p></div><div class="plbl">Prompt</div><div class="pmono" id="pt'+idx+'">'+p.prompt+'</div><div class="copy-row"><button class="btn btn-cp" id="cpb'+idx+'" onclick="cpP('+idx+')" aria-label="Copiar prompt"><i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt</button></div><div class="tip-row"><i class="ti ti-bulb" aria-hidden="true"></i><p><strong>Tip:</strong> '+p.tip+'</p></div></div>';
     g.appendChild(card);
   });
 }
- 
-function cpPrompt(idx) {
-  const t=document.getElementById('pt'+idx).textContent;
-  const btn=document.getElementById('cpb'+idx);
-  navigator.clipboard.writeText(t).then(()=>{
+
+function cpP(idx){
+  var t=document.getElementById('pt'+idx).textContent;
+  var btn=document.getElementById('cpb'+idx);
+  navigator.clipboard.writeText(t).then(function(){
     btn.classList.add('done'); btn.innerHTML='<i class="ti ti-check" aria-hidden="true"></i>¡Copiado!';
-    setTimeout(()=>{ btn.classList.remove('done'); btn.innerHTML='<i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt'; },2500);
+    setTimeout(function(){ btn.classList.remove('done'); btn.innerHTML='<i class="ti ti-copy" aria-hidden="true"></i>Copiar prompt'; },2500);
   });
 }
- 
+
 // ── INIT ──
 buildPrompts();
-try{ const d=JSON.parse(localStorage.getItem('diag_v2')||'{}'); if(d.partA) Object.assign(S,d); }catch(e){}
+try{
+  var saved=JSON.parse(localStorage.getItem('diag_v2')||'{}');
+  if(saved.partA) Object.assign(S,saved);
+}catch(e){}
 </script>
 </body>
 </html>
