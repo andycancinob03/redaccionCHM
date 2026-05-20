@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redacción Estratégica para Líderes — CHM Minería × Uninorte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d1b2a;--ink2:#2c3e50;--muted:#6b7a8d;
+  --amber:#b87a00;--amber-bg:#fdf3dc;--amber-border:#f0c040;--amber-dark:#7a4f00;
+  --teal:#0a6e56;--teal-bg:#e0f4f0;--teal-border:#5dcaa5;--teal-dark:#054233;
+  --coral:#c0392b;--coral-bg:#fdecea;--coral-border:#f0998b;--coral-dark:#7a2218;
+  --blue:#1a4a8a;--blue-bg:#e8f0fb;--blue-border:#85b7eb;--blue-dark:#0c2d5a;
+  --green:#155724;--green-bg:#d4edda;--green-border:#80c894;
+  --surface:#f7f6f3;--white:#fff;--border:#e0ddd8;--border2:#ccc9c2;
+  --radius:10px;--radius-sm:6px;--radius-lg:14px;
+  --shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:var(--ink);font-size:15px;line-height:1.7;min-height:100vh}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ── HEADER ── */
+.site-header{background:var(--ink);color:var(--white);padding:2rem 1.5rem 1.75rem}
+.header-eyebrow{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--amber-border);margin-bottom:.6rem}
+.header-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.15;margin-bottom:.4rem}
+.header-sub{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:1.25rem}
+.header-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:4px 11px;border-radius:100px;font-size:11.5px;color:rgba(255,255,255,.8)}
+.pill i{font-size:13px;opacity:.7}
+
+/* ── NAV ── */
+.site-nav{background:var(--white);border-bottom:1px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:200}
+.site-nav::-webkit-scrollbar{display:none}
+.nav-btn{padding:13px 18px;border:none;background:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;display:flex;align-items:center;gap:6px}
+.nav-btn:hover{color:var(--ink)}
+.nav-btn.active{color:var(--ink);border-bottom-color:var(--amber)}
+.nav-btn i{font-size:15px}
+.nav-dot{width:18px;height:18px;background:var(--amber-bg);color:var(--amber-dark);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+.nav-btn.active .nav-dot{background:var(--amber);color:var(--white)}
+
+/* ── SCREEN SYSTEM ── */
+.screen{display:none}.screen.active{display:block}
+.container{max-width:820px;margin:0 auto;padding:2rem 1.25rem}
+
+/* ── HOME ── */
+.home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.5rem}
+.home-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.4rem;cursor:pointer;transition:border-color .15s,box-shadow .15s;text-align:left}
+.home-card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
+.home-card-icon{width:44px;height:44px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;font-size:22px}
+.home-card-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.home-card-desc{font-size:13px;color:var(--muted);line-height:1.5}
+.home-card-arrow{font-size:13px;color:var(--muted);margin-top:.8rem;display:block}
+
+/* ── SECTION LABELS ── */
+.section-label{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.page-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;color:var(--ink);line-height:1.2;margin-bottom:.4rem}
+.page-meta{font-size:13px;color:var(--muted);margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.badge{display:inline-block;padding:2px 10px;border-radius:100px;font-size:11.5px;font-weight:500}
+.badge-amber{background:var(--amber-bg);color:var(--amber-dark)}
+.badge-teal{background:var(--teal-bg);color:var(--teal-dark)}
+.badge-coral{background:var(--coral-bg);color:var(--coral-dark)}
+.badge-blue{background:var(--blue-bg);color:var(--blue-dark)}
+.badge-green{background:var(--green-bg);color:var(--green)}
+
+/* ── CARDS ── */
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.3rem;margin-bottom:1rem}
+.divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
+
+/* ── DIAGNOSTIC FORM ── */
+.prog-bar{height:4px;background:var(--border);border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.prog-fill{height:4px;background:var(--teal);border-radius:2px;transition:width .4s}
+.q-block{margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border)}
+.q-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.q-text{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:.7rem;line-height:1.5}
+.q-hint{font-size:12.5px;color:var(--muted);margin-bottom:.7rem;line-height:1.5}
+.likert-wrap{display:flex;align-items:center;gap:.5rem}
+.likert-lbl{font-size:11.5px;color:var(--muted);min-width:54px;line-height:1.3}
+.likert-lbl.r{text-align:right}
+.likert-opts{display:flex;gap:6px;flex:1;justify-content:center}
+.lk-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border2);background:var(--white);color:var(--muted);font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .12s,color .12s,border-color .12s}
+.lk-btn:hover{background:var(--teal-bg);border-color:var(--teal-border)}
+.lk-btn.sel{background:var(--teal-bg);color:var(--teal-dark);border-color:var(--teal)}
+.checkbox-group{display:flex;flex-direction:column;gap:9px}
+.cb-item{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:2px 0}
+.cb-item input{margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--teal);cursor:pointer}
+.cb-item span{font-size:13.5px;color:var(--ink);line-height:1.5}
+.italic-block{background:var(--surface);border:1px dashed var(--border2);border-radius:var(--radius-sm);padding:1rem 1.1rem;margin-bottom:1rem;font-size:13px;color:var(--ink2);line-height:1.7;font-style:italic}
+.timer-display{font-size:13px;font-weight:600;color:var(--teal)}
+.nav-row{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem}
+
+/* ── BUTTONS ── */
+.btn{border-radius:var(--radius-sm);padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:background .12s,border-color .12s,opacity .12s;display:inline-flex;align-items:center;gap:6px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-primary{background:var(--teal);color:var(--white);border-color:var(--teal)}
+.btn-primary:hover:not(:disabled){background:var(--teal-dark)}
+.btn-secondary{background:var(--white);color:var(--ink);border-color:var(--border2)}
+.btn-secondary:hover:not(:disabled){background:var(--surface)}
+.btn-amber{background:var(--amber);color:var(--white);border-color:var(--amber)}
+.btn-amber:hover:not(:disabled){background:var(--amber-dark)}
+.btn-copy{background:var(--surface);color:var(--ink2);border:1px solid var(--border);font-size:12px;padding:5px 12px;border-radius:100px}
+.btn-copy:hover{background:var(--border)}
+.btn-copy.copied{background:var(--green-bg);color:var(--green);border-color:var(--green-border)}
+
+/* ── RESULTS ── */
+.result-stat-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.result-stat-label{font-size:12.5px;color:var(--ink2);width:190px;flex-shrink:0;line-height:1.4}
+.result-bar-bg{flex:1;height:20px;background:var(--surface);border-radius:3px;overflow:hidden;border:1px solid var(--border)}
+.result-bar-fill{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:7px;transition:width .5s}
+.result-bar-val{font-size:11px;font-weight:600;color:var(--white);white-space:nowrap}
+.result-bar-ext{font-size:12px;color:var(--muted);margin-left:6px}
+.b-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:100px;font-size:12px;font-weight:500;margin:3px}
+.b-correct{background:var(--green-bg);color:var(--green)}
+.b-wrong{background:var(--coral-bg);color:var(--coral-dark)}
+.b-missed{background:var(--amber-bg);color:var(--amber-dark)}
+
+/* ── PROMPTS ── */
+.prompts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem;margin-top:.5rem}
+.prompt-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.prompt-card-header{padding:1.1rem 1.3rem .9rem;border-bottom:1px solid var(--border)}
+.prompt-card-session{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.prompt-card-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.prompt-card-desc{font-size:12.5px;color:var(--muted);line-height:1.5}
+.prompt-card-body{padding:1rem 1.3rem}
+.prompt-label{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.prompt-text{background:var(--ink);color:#a8d8d8;border-radius:var(--radius-sm);padding:.9rem 1rem;font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-bottom:.75rem;position:relative}
+.prompt-copy-row{display:flex;justify-content:flex-end;margin-bottom:.75rem}
+.tip-row{display:flex;gap:8px;align-items:flex-start;background:var(--amber-bg);border-radius:var(--radius-sm);padding:.7rem .9rem}
+.tip-row i{font-size:16px;color:var(--amber);flex-shrink:0;margin-top:1px}
+.tip-row p{font-size:12.5px;color:var(--amber-dark);line-height:1.5}
+.when-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:.6rem}
+.when-row i{font-size:15px;color:var(--teal);flex-shrink:0;margin-top:2px}
+.when-row p{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.acct-badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:100px;font-weight:500}
+
+/* ── DONE SCREEN ── */
+.done-icon{width:56px;height:56px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem}
+.done-prompt-box{background:var(--ink);color:#a8d8d8;border-radius:var(--radius-sm);padding:.85rem 1rem;font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin-top:.6rem}
+
+/* ── ALERT / INFO ── */
+.info-box{border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:13px;line-height:1.55;display:flex;gap:8px;align-items:flex-start;margin-bottom:1rem}
+.info-box i{font-size:16px;flex-shrink:0;margin-top:1px}
+.info-amber{background:var(--amber-bg);color:var(--amber-dark);border:1px solid var(--amber-border)}
+.info-teal{background:var(--teal-bg);color:var(--teal-dark);border:1px solid var(--teal-border)}
+
+/* ── SPINNER ── */
+.spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.3);border-top-color:var(--white);border-radius:50%;animation:rot .7s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .site-header{padding:1.5rem 1rem 1.25rem}
+  .container{padding:1.5rem 1rem}
+  .prompts-grid{grid-template-columns:1fr}
+  .home-grid{grid-template-columns:1fr}
+  .likert-lbl{min-width:42px;font-size:10.5px}
+  .lk-btn{width:32px;height:32px}
+}
+</style>
+</head>
+<body>
+<h1 class="sr-only">Herramienta de redacción estratégica para líderes — CHM Minería y Uninorte</h1>
+
+<header class="site-header">
+  <div class="header-eyebrow">CHM Minería × Uninorte — Centro de Educación Continuada</div>
+  <div class="header-title">Redacción estratégica para líderes</div>
+  <div class="header-sub">Escribir con claridad, autoridad e impacto · Taller 8 horas</div>
+  <div class="header-pills">
+    <span class="pill"><i class="ti ti-clock"></i> 2 sesiones de 4h</span>
+    <span class="pill"><i class="ti ti-users"></i> Líderes y directivos</span>
+    <span class="pill"><i class="ti ti-device-laptop"></i> Computador o celular</span>
+  </div>
+</header>
+
+<nav class="site-nav" role="tablist" aria-label="Secciones del taller">
+  <button class="nav-btn active" onclick="showScreen('home')" role="tab" aria-selected="true">
+    <i class="ti ti-home" aria-hidden="true"></i> Inicio
+  </button>
+  <button class="nav-btn" onclick="showScreen('diag')" role="tab" aria-selected="false">
+    <span class="nav-dot">0</span> Diagnóstico
+  </button>
+  <button class="nav-btn" onclick="showScreen('prompts')" role="tab" aria-selected="false">
+    <i class="ti ti-sparkles" aria-hidden="true"></i> Biblioteca de prompts
+  </button>
+</nav>
+
+<!-- ══════════ HOME ══════════ -->
+<div id="screen-home" class="screen active">
+<div class="container">
+  <div class="section-label">Bienvenido al taller</div>
+  <div class="page-title">¿Por dónde quieres empezar?</div>
+  <p style="font-size:14px;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">Esta herramienta acompaña las dos sesiones del taller. Úsala desde tu computador o celular.</p>
+  <div class="home-grid">
+    <button class="home-card" onclick="showScreen('diag')" aria-label="Ir al diagnóstico inicial">
+      <div class="home-card-icon" style="background:var(--teal-bg)"><i class="ti ti-clipboard-check" style="color:var(--teal)" aria-hidden="true"></i></div>
+      <div class="home-card-title">Diagnóstico inicial</div>
+      <div class="home-card-desc">Autoevaluación · Detección de errores · Mini-escritura con cuenta regresiva. Aprox. 12 minutos.</div>
+      <span class="home-card-arrow">Comenzar →</span>
+    </button>
+    <button class="home-card" onclick="showScreen('prompts')" aria-label="Ver biblioteca de prompts de IA">
+      <div class="home-card-icon" style="background:var(--amber-bg)"><i class="ti ti-sparkles" style="color:var(--amber)" aria-hidden="true"></i></div>
+      <div class="home-card-title">Biblioteca de prompts</div>
+      <div class="home-card-desc">6 prompts listos para usar en Claude o ChatGPT. Uno por cada momento clave del taller.</div>
+      <span class="home-card-arrow">Explorar →</span>
+    </button>
+    <div class="home-card" style="cursor:default;border-style:dashed;background:var(--surface)">
+      <div class="home-card-icon" style="background:var(--blue-bg)"><i class="ti ti-info-circle" style="color:var(--blue)" aria-hidden="true"></i></div>
+      <div class="home-card-title" style="font-size:14px">Versión con estadísticas grupales</div>
+      <div class="home-card-desc">Para ver los resultados del grupo en tiempo real, el tallerista usa la versión dentro de Claude.ai, donde se habilita el almacenamiento compartido.</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <p style="font-size:13px;color:var(--muted);line-height:1.6"><strong style="color:var(--ink)">Cómo funciona esta herramienta:</strong> Es completamente autónoma. Funciona sin conexión a ningún servidor externo. Los datos del diagnóstico se guardan solo en tu dispositivo (localStorage) y no se envían a ningún lugar.</p>
+</div>
+</div>
+
+<!-- ══════════ DIAGNÓSTICO ══════════ -->
+<div id="screen-diag" class="screen">
+<div class="container">
+  <!-- STEP: intro -->
+  <div id="diag-intro">
+    <div class="section-label">Momento 0 — Antes de iniciar</div>
+    <div class="page-title">Diagnóstico inicial</div>
+    <div class="page-meta"><span class="badge badge-teal">⏱ ~12 minutos</span><span class="badge badge-amber">3 partes</span></div>
+    <div class="info-box info-amber"><i class="ti ti-alert-circle" aria-hidden="true"></i><span>Tus respuestas se guardan solo en este dispositivo. No se comparten con nadie.</span></div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:.6rem"><strong>Parte A</strong> — Autoevaluación de hábitos de escritura (8 preguntas, escala 1–5)</p>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:.6rem"><strong>Parte B</strong> — Detección de errores en un párrafo corporativo real</p>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.6"><strong>Parte C</strong> — Mini-escritura espontánea cronometrada (3 minutos)</p>
+    </div>
+    <div style="display:flex;justify-content:flex-end">
+      <button class="btn btn-primary" onclick="startDiag()"><i class="ti ti-arrow-right" aria-hidden="true"></i> Comenzar diagnóstico</button>
+    </div>
+  </div>
+
+  <!-- STEP: Part A -->
+  <div id="diag-a" style="display:none">
+    <div class="prog-bar"><div class="prog-fill" style="width:33%" id="prog-a"></div></div>
+    <div class="section-label">Parte A de 3 · Autoevaluación</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:1.2rem;line-height:1.5">Escala: 1 = nunca · 5 = siempre. No hay respuestas correctas.</p>
+    <div class="card" id="partA-container"></div>
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="showDiagStep('intro')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Atrás</button>
+      <button class="btn btn-primary" onclick="goToB()">Continuar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <!-- STEP: Part B -->
+  <div id="diag-b" style="display:none">
+    <div class="prog-bar"><div class="prog-fill" style="width:66%"></div></div>
+    <div class="section-label">Parte B de 3 · Detección de errores</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem;line-height:1.5">Lee el siguiente párrafo corporativo y selecciona todos los problemas que detectas:</p>
+    <div class="italic-block">"En el marco del proceso de mejoramiento continuo que se viene adelantando en nuestra organización desde el año anterior y que ha sido parte de nuestra estrategia de transformación institucional, y teniendo en cuenta los diversos factores que inciden en el rendimiento del equipo, entre los cuales se encuentran los tiempos de respuesta, la carga laboral y la comunicación interna, se hace necesario comunicar que habrá cambios en los horarios a partir del próximo mes."</div>
+    <div class="card">
+      <div class="checkbox-group" id="partB-container"></div>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="showDiagStep('a')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Atrás</button>
+      <button class="btn btn-primary" onclick="goToC()">Continuar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <!-- STEP: Part C -->
+  <div id="diag-c" style="display:none">
+    <div class="prog-bar"><div class="prog-fill" style="width:90%"></div></div>
+    <div class="section-label">Parte C de 3 · Mini-escritura</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem;line-height:1.5">Tienes <strong class="timer-display" id="timer-txt">3:00</strong> para escribir un mensaje interno. Escribe con naturalidad.</p>
+    <div class="italic-block" style="font-style:normal"><strong>Situación:</strong> Debes informar a tu equipo que la reunión mensual se adelanta al jueves de esta semana a las 3:00 p.m., porque el director general necesita viajar el viernes. Escribe el mensaje como lo harías en la realidad.</div>
+    <div class="card" style="padding:.6rem">
+      <textarea id="partC-text" style="width:100%;border:none;background:transparent;resize:vertical;min-height:100px;font-size:14px;color:var(--ink);outline:none;font-family:'DM Sans',sans-serif;line-height:1.65;padding:.5rem" placeholder="Escribe aquí tu mensaje..."></textarea>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="stopTimer();showDiagStep('b')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Atrás</button>
+      <button class="btn btn-primary" onclick="submitDiag()"><i class="ti ti-send" aria-hidden="true"></i> Enviar diagnóstico</button>
+    </div>
+  </div>
+
+  <!-- STEP: Results -->
+  <div id="diag-results" style="display:none">
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div class="done-icon"><i class="ti ti-check" style="font-size:28px;color:var(--teal)" aria-hidden="true"></i></div>
+      <p style="font-size:16px;font-weight:600;color:var(--ink);margin-bottom:5px">Diagnóstico completado</p>
+      <p style="font-size:13px;color:var(--muted)">Aquí están tus resultados personales</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label" style="margin-bottom:.75rem">Parte A — Tu autoevaluación</div>
+      <div id="results-a"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-label" style="margin-bottom:.75rem">Parte B — Errores que detectaste</div>
+      <div id="results-b"></div>
+      <div id="results-b-explanation" style="margin-top:1rem"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-label" style="margin-bottom:.5rem">Parte C — Tu mini-escritura</div>
+      <div id="results-c-text" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.85rem 1rem;font-size:13.5px;color:var(--ink);line-height:1.65;margin-bottom:.9rem"></div>
+      <div class="info-box info-teal" style="margin-bottom:.6rem"><i class="ti ti-robot" aria-hidden="true"></i><span>Analiza tu escritura ahora mismo con este prompt en Claude.ai o ChatGPT:</span></div>
+      <div class="done-prompt-box" id="results-c-prompt"></div>
+      <div style="display:flex;justify-content:flex-end;margin-top:.6rem">
+        <button class="btn btn-copy" id="copy-analysis-btn" onclick="copyAnalysisPrompt()"><i class="ti ti-copy" aria-hidden="true"></i> Copiar prompt</button>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem">
+      <button class="btn btn-secondary" onclick="resetDiag()"><i class="ti ti-refresh" aria-hidden="true"></i> Hacer de nuevo</button>
+      <button class="btn btn-amber" onclick="showScreen('prompts')"><i class="ti ti-sparkles" aria-hidden="true"></i> Ver biblioteca de prompts</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════ BIBLIOTECA DE PROMPTS ══════════ -->
+<div id="screen-prompts" class="screen">
+<div class="container">
+  <div class="section-label">Herramientas de IA para el taller</div>
+  <div class="page-title">Biblioteca de prompts</div>
+  <div class="page-meta"><span class="badge badge-amber">6 prompts</span><span class="badge badge-teal">Claude · ChatGPT · Gemini</span></div>
+  <div class="info-box info-teal"><i class="ti ti-info-circle" aria-hidden="true"></i><span>La IA es tu <strong>copiloto</strong>, no tu piloto. Úsala para ver lo que no ves, no para que escriba por ti. El criterio editorial siempre es tuyo.</span></div>
+  <div class="prompts-grid" id="prompts-grid"></div>
+</div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer style="background:var(--white);border-top:1px solid var(--border);padding:1.25rem 1.5rem;margin-top:2rem">
+  <p style="font-size:12px;color:var(--muted);text-align:center">Redacción Estratégica para Líderes · CHM Minería × Uninorte CEC · Taller de 8 horas</p>
+</footer>
+
+<script>
+// ── STATE ──
+const state = { partA: new Array(8).fill(0), partB: [], partC: '' };
+let timerInterval = null, timerSecs = 180;
+
+// ── CONTENT ──
+const QA = [
+  "Antes de escribir un texto importante, tengo claro el objetivo y la audiencia.",
+  "Mis correos suelen quedar más largos de lo que quisiera.",
+  "Uso estructura clara (apertura, desarrollo, cierre) en mis informes.",
+  "Me cuesta adaptar el tono según la jerarquía del destinatario.",
+  "He recibido comentarios de que mis textos son difíciles de entender.",
+  "Reviso y edito mis textos antes de enviarlos.",
+  "Me siento seguro/a redactando propuestas o comunicados de alto impacto.",
+  "Sé identificar y corregir el uso excesivo de voz pasiva en mis textos."
+];
+const QA_SHORT = [
+  "Claridad de objetivo y audiencia",
+  "Control de extensión",
+  "Estructura en informes",
+  "Adaptación de tono",
+  "Retroalimentación de claridad",
+  "Revisión antes de enviar",
+  "Seguridad en propuestas",
+  "Detección de voz pasiva"
+];
+const OPT_B = [
+  { text: "La idea principal aparece al final del párrafo", correct: true },
+  { text: "La oración es demasiado larga y difícil de seguir", correct: true },
+  { text: "Hay redundancias evidentes en el texto", correct: true },
+  { text: "El lenguaje es excesivamente formal y rígido", correct: true },
+  { text: "No hay una acción clara para el lector", correct: true },
+  { text: "No veo ningún problema con este párrafo", correct: false }
+];
+const B_EXPLANATIONS = [
+  "La conclusión (cambio de horarios) aparece en la última línea. Debería ser la primera.",
+  "La oración tiene 93 palabras y dos comas separando ideas que deberían ser oraciones distintas.",
+  "'Proceso que se viene adelantando' puede decirse simplemente 'proceso'. 'Mejoramiento continuo' es redundante en contexto.",
+  "Frases como 'en atención a los lineamientos estratégicos' son ecos corporativos que no aportan información.",
+  "El lector no sabe qué debe hacer: ¿confirmar asistencia? ¿actualizar su agenda? ¿consultar con alguien?"
+];
+
+const PROMPTS = [
+  {
+    session: "Diagnóstico inicial",
+    sessionColor: "teal",
+    icon: "ti-stethoscope",
+    title: "Diagnóstico de texto propio",
+    desc: "Obtén un diagnóstico rápido y estructurado de cualquier texto tuyo antes de editarlo.",
+    when: "Antes de editar un texto importante. Funciona con correos, informes, propuestas o comunicados. Especialmente útil al inicio del taller.",
+    tip: "Pega un texto real que hayas escrito recientemente. Cuanto más auténtico, más revelador el diagnóstico. No corrijas nada antes de pasarlo.",
+    prompt: `Actúa como consultor de comunicación corporativa en español. Analiza el siguiente texto y dame un diagnóstico breve con: (1) máximo dos fortalezas concretas, (2) los tres problemas de redacción más urgentes a corregir, (3) la primera oración reescrita con mejor estructura. Sé directo y usa lenguaje simple.
+
+Texto: [PEGA AQUÍ TU TEXTO]`
+  },
+  {
+    session: "Sesión 1",
+    sessionColor: "blue",
+    icon: "ti-eye",
+    title: "Espejo de reescritura",
+    desc: "Evalúa la calidad de un texto que ya editaste. La IA actúa como segundo par de ojos con criterios específicos.",
+    when: "Después de reescribir manualmente un párrafo en clase. Compara la evaluación de la IA con la de tu compañero de pareja.",
+    tip: "Úsalo DESPUÉS de editar tú mismo, no antes. El valor está en la comparación, no en delegar la edición a la máquina.",
+    prompt: `Actúa como editor corporativo senior. Evalúa este párrafo ejecutivo según tres criterios: (1) Claridad estructural [nota 1-10], (2) Economía del lenguaje [nota 1-10], (3) Orientación al lector [nota 1-10]. Para cada criterio, da la nota y una observación de una sola oración. Sé preciso, no condescendiente.
+
+Párrafo: [PEGA AQUÍ TU PÁRRAFO REESCRITO]`
+  },
+  {
+    session: "Sesión 2",
+    sessionColor: "coral",
+    icon: "ti-scissors",
+    title: "Edición crítica sin perder la voz",
+    desc: "Elimina los 4 enemigos de la claridad (ambigüedad, redundancia, gerundismo, voz pasiva) sin perder tu tono ni intención.",
+    when: "En el taller de edición de correos electrónicos. También útil después del taller para cualquier texto que sientas 'pesado'.",
+    tip: "Pide siempre que explique qué cambió y por qué. Evalúa cada sugerencia: ¿preserva exactamente lo que querías decir? El criterio final es tuyo.",
+    prompt: `Actúa como editor de comunicación corporativa en español. Edita el siguiente texto para: (1) eliminar redundancias evidentes, (2) convertir la voz pasiva a activa donde mejore la claridad, (3) partir oraciones de más de 25 palabras, (4) eliminar adverbios innecesarios. IMPORTANTE: conserva el tono y la intención original del autor. Al final, muéstrame los cambios específicos que hiciste y el porcentaje de reducción de palabras.
+
+Texto: [PEGA AQUÍ TU CORREO O PÁRRAFO]`
+  },
+  {
+    session: "Sesión 3",
+    sessionColor: "amber",
+    icon: "ti-layout-grid",
+    title: "Andamiaje estructural",
+    desc: "La IA te genera solo el esquema de tu documento. Tú construyes el contenido con tu propio conocimiento del contexto.",
+    when: "Al empezar un informe, propuesta o comunicado desde cero. Especialmente útil cuando no sabes por dónde empezar.",
+    tip: "NUNCA le pidas que escriba el contenido en este paso. El valor está en que el esquema te libera para pensar en QUÉ decir, no en cómo organizarlo.",
+    prompt: `Soy [CARGO] en [EMPRESA]. Necesito escribir un [informe de gestión / propuesta ejecutiva / comunicado interno] sobre [TEMA]. El lector principal es [PERFIL Y JERARQUÍA]. El objetivo es que el lector [ACCIÓN ESPERADA CONCRETA].
+
+Ayúdame a construir SOLO el esquema de secciones con una línea de descripción de qué debe ir en cada una. NO redactes el contenido todavía. Solo la arquitectura del documento.`
+  },
+  {
+    session: "Sesión 4",
+    sessionColor: "blue",
+    icon: "ti-arrows-split-2",
+    title: "A/B testing de tono",
+    desc: "Genera dos versiones del mismo mensaje con tonos distintos. Tú decides cuál refleja mejor tu voz y tu objetivo.",
+    when: "Cuando no estás seguro del tono para un mensaje delicado, persuasivo o de alto impacto. Útil en negociaciones, comunicados de cambio y propuestas.",
+    tip: "Después de recibir las dos versiones, pregúntate: ¿cuál suena más a mí? ¿cuál logra mejor el objetivo? Puedes mezclar elementos de ambas.",
+    prompt: `Tengo este mensaje que quiero enviar a [PERFIL DEL LECTOR] para lograr [OBJETIVO CONCRETO]. Dame dos versiones: una más directiva (va al punto, afirma con seguridad) y una más consultiva (invita, genera diálogo). Para cada versión, dime en una oración qué prioriza y qué sacrifica.
+
+Mensaje original: [PEGA TU TEXTO]`
+  },
+  {
+    session: "Uso diario",
+    sessionColor: "green",
+    icon: "ti-checklist",
+    title: "Verificación final del lector",
+    desc: "Lee tu texto como un ejecutivo con 30 segundos y detecta qué faltó, qué sobró y qué fue más difícil de entender.",
+    when: "Antes de enviar cualquier correo, informe o comunicado importante. Es el último filtro antes de pulsar 'enviar'.",
+    tip: "Si la IA no puede responder '¿qué se supone que debes hacer después de leerlo?' con claridad, reescribe el cierre antes de enviar.",
+    prompt: `Lee este texto como si fueras un ejecutivo que tiene 30 segundos disponibles. Al terminar, responde tres preguntas: (1) ¿Qué se supone que debes hacer después de leerlo? (2) ¿Qué información faltó o sobró? (3) ¿Qué oración fue más difícil de entender y cómo la mejorarías en una línea?
+
+Texto: [PEGA TU TEXTO]`
+  }
+];
+
+const SESSION_COLORS = {
+  teal: { bg: 'var(--teal-bg)', text: 'var(--teal-dark)', border: 'var(--teal-border)' },
+  blue: { bg: 'var(--blue-bg)', text: 'var(--blue-dark)', border: 'var(--blue-border)' },
+  coral: { bg: 'var(--coral-bg)', text: 'var(--coral-dark)', border: 'var(--coral-border)' },
+  amber: { bg: 'var(--amber-bg)', text: 'var(--amber-dark)', border: 'var(--amber-border)' },
+  green: { bg: 'var(--green-bg)', text: 'var(--green)', border: 'var(--green-border)' }
+};
+
+// ── NAV ──
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  const navMap = { home: 0, diag: 1, prompts: 2 };
+  const btns = document.querySelectorAll('.nav-btn');
+  if (btns[navMap[id]]) btns[navMap[id]].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showDiagStep(step) {
+  ['intro','a','b','c','results'].forEach(s => {
+    const el = document.getElementById('diag-' + s);
+    if(el) el.style.display = s === step ? 'block' : 'none';
+  });
+}
+
+// ── DIAGNOSTIC ──
+function startDiag() {
+  buildPartA();
+  showDiagStep('a');
+}
+
+function buildPartA() {
+  const c = document.getElementById('partA-container');
+  c.innerHTML = '';
+  QA.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'q-block';
+    div.innerHTML = `<div class="q-text">${i+1}. ${q}</div><div class="likert-wrap"><span class="likert-lbl">Nunca</span><div class="likert-opts" id="lk${i}"></div><span class="likert-lbl r">Siempre</span></div>`;
+    c.appendChild(div);
+    const opts = div.querySelector(`#lk${i}`);
+    for(let v=1;v<=5;v++){
+      const btn = document.createElement('button');
+      btn.className='lk-btn'+(state.partA[i]===v?' sel':'');
+      btn.textContent = v;
+      btn.setAttribute('aria-label', `${v} de 5 para pregunta ${i+1}`);
+      btn.onclick = () => {
+        state.partA[i] = v;
+        opts.querySelectorAll('.lk-btn').forEach((b,bi)=>b.classList.toggle('sel',bi+1===v));
+      };
+      opts.appendChild(btn);
+    }
+  });
+}
+
+function goToB() {
+  buildPartB();
+  showDiagStep('b');
+}
+
+function buildPartB() {
+  const c = document.getElementById('partB-container');
+  c.innerHTML = '';
+  OPT_B.forEach((opt, i) => {
+    const label = document.createElement('label');
+    label.className = 'cb-item';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = state.partB.includes(i);
+    cb.onchange = () => {
+      if(cb.checked){if(!state.partB.includes(i))state.partB.push(i);}
+      else{state.partB = state.partB.filter(x=>x!==i);}
+    };
+    const sp = document.createElement('span');
+    sp.textContent = opt.text;
+    label.appendChild(cb); label.appendChild(sp);
+    c.appendChild(label);
+  });
+}
+
+function goToC() {
+  showDiagStep('c');
+  startTimer();
+}
+
+function startTimer() {
+  timerSecs = 180;
+  updateTimer();
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timerSecs--;
+    updateTimer();
+    if(timerSecs <= 0) clearInterval(timerInterval);
+  }, 1000);
+}
+
+function stopTimer() { clearInterval(timerInterval); }
+
+function updateTimer() {
+  const m = Math.floor(Math.max(timerSecs,0)/60);
+  const s = Math.max(timerSecs,0)%60;
+  const el = document.getElementById('timer-txt');
+  if(el) el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+}
+
+function submitDiag() {
+  stopTimer();
+  state.partC = document.getElementById('partC-text').value.trim();
+  try { localStorage.setItem('diag_result', JSON.stringify({ ...state, ts: Date.now() })); } catch(e){}
+  renderResults();
+  showDiagStep('results');
+}
+
+function renderResults() {
+  // Part A bars
+  const ra = document.getElementById('results-a');
+  ra.innerHTML = '';
+  QA_SHORT.forEach((lbl, i) => {
+    const v = state.partA[i] || 0;
+    const pct = v ? Math.round((v/5)*100) : 0;
+    const color = v >= 4 ? '#1D9E75' : v >= 3 ? '#BA7517' : v > 0 ? '#D85A30' : '#ccc';
+    const row = document.createElement('div');
+    row.className = 'result-stat-row';
+    row.innerHTML = `<span class="result-stat-label">${lbl}</span><div class="result-bar-bg"><div class="result-bar-fill" style="width:${pct}%;background:${color}"><span class="result-bar-val">${v > 0 ? v : ''}</span></div></div><span class="result-bar-ext">${v > 0 ? '/5' : '—'}</span>`;
+    ra.appendChild(row);
+  });
+
+  // Part B
+  const rb = document.getElementById('results-b');
+  rb.innerHTML = '';
+  const rbE = document.getElementById('results-b-explanation');
+  rbE.innerHTML = '';
+
+  let correct = 0, wrong = 0, missed = [];
+  OPT_B.forEach((opt, i) => {
+    const selected = state.partB.includes(i);
+    if(opt.correct && selected) correct++;
+    else if(!opt.correct && selected) wrong++;
+    else if(opt.correct && !selected) missed.push(i);
+  });
+
+  const summary = document.createElement('div');
+  summary.style.marginBottom = '.75rem';
+  summary.innerHTML = `<p style="font-size:13.5px;color:var(--ink2);line-height:1.6">Detectaste <strong>${correct} de 5</strong> problemas correctamente.${wrong ? ` Marcaste 1 opción incorrecta (la última).` : ''}</p>`;
+  rb.appendChild(summary);
+
+  const chips = document.createElement('div');
+  OPT_B.forEach((opt, i) => {
+    const selected = state.partB.includes(i);
+    let cls = '', icon = '';
+    if(opt.correct && selected){ cls='b-correct'; icon='<i class="ti ti-check" aria-hidden="true"></i>'; }
+    else if(!opt.correct && selected){ cls='b-wrong'; icon='<i class="ti ti-x" aria-hidden="true"></i>'; }
+    else if(opt.correct && !selected){ cls='b-missed'; icon='<i class="ti ti-eye-off" aria-hidden="true"></i>'; }
+    else return;
+    chips.innerHTML += `<span class="b-chip ${cls}">${icon} ${opt.text}</span>`;
+  });
+  rb.appendChild(chips);
+
+  if(missed.length > 0){
+    rbE.innerHTML = `<div style="font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px">Errores que no detectaste:</div>`;
+    missed.forEach(i => {
+      rbE.innerHTML += `<div style="background:var(--amber-bg);border-radius:var(--radius-sm);padding:.6rem .85rem;margin-bottom:5px;font-size:12.5px;color:var(--amber-dark);line-height:1.5"><strong>${OPT_B[i].text}</strong> — ${B_EXPLANATIONS[i]}</div>`;
+    });
+  }
+
+  // Part C
+  const rc = document.getElementById('results-c-text');
+  rc.textContent = state.partC || '(no escribiste texto)';
+
+  const promptBox = document.getElementById('results-c-prompt');
+  const userText = state.partC || '[sin texto]';
+  promptBox.textContent = `Actúa como consultor de comunicación corporativa. Analiza el siguiente mensaje y dame: (1) dos fortalezas concretas, (2) los tres problemas más urgentes, (3) la primera oración reescrita. Sé directo.\n\nTexto: "${userText}"`;
+}
+
+function copyAnalysisPrompt() {
+  const box = document.getElementById('results-c-prompt');
+  const btn = document.getElementById('copy-analysis-btn');
+  navigator.clipboard.writeText(box.textContent).then(() => {
+    btn.classList.add('copied');
+    btn.innerHTML = '<i class="ti ti-check" aria-hidden="true"></i> ¡Copiado!';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = '<i class="ti ti-copy" aria-hidden="true"></i> Copiar prompt';
+    }, 2500);
+  });
+}
+
+function resetDiag() {
+  state.partA.fill(0); state.partB = []; state.partC = '';
+  document.getElementById('partC-text').value = '';
+  showDiagStep('intro');
+}
+
+// ── PROMPTS ──
+function buildPrompts() {
+  const grid = document.getElementById('prompts-grid');
+  grid.innerHTML = '';
+  PROMPTS.forEach((p, idx) => {
+    const colors = SESSION_COLORS[p.sessionColor] || SESSION_COLORS.teal;
+    const card = document.createElement('div');
+    card.className = 'prompt-card';
+    card.innerHTML = `
+      <div class="prompt-card-header">
+        <div class="prompt-card-session" style="color:${colors.text}">${p.session}</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <i class="ti ${p.icon}" style="font-size:18px;color:${colors.text}" aria-hidden="true"></i>
+          <div class="prompt-card-title">${p.title}</div>
+        </div>
+        <div class="prompt-card-desc">${p.desc}</div>
+      </div>
+      <div class="prompt-card-body">
+        <div class="when-row"><i class="ti ti-clock" aria-hidden="true"></i><p><strong>Cuándo usarlo:</strong> ${p.when}</p></div>
+        <div class="prompt-label">Prompt</div>
+        <div class="prompt-text" id="prompt-text-${idx}">${p.prompt}</div>
+        <div class="prompt-copy-row">
+          <button class="btn btn-copy" id="copy-btn-${idx}" onclick="copyPrompt(${idx})" aria-label="Copiar prompt ${p.title}"><i class="ti ti-copy" aria-hidden="true"></i> Copiar prompt</button>
+        </div>
+        <div class="tip-row"><i class="ti ti-bulb" aria-hidden="true"></i><p><strong>Tip:</strong> ${p.tip}</p></div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+function copyPrompt(idx) {
+  const text = document.getElementById('prompt-text-'+idx).textContent;
+  const btn = document.getElementById('copy-btn-'+idx);
+  navigator.clipboard.writeText(text).then(() => {
+    btn.classList.add('copied');
+    btn.innerHTML = '<i class="ti ti-check" aria-hidden="true"></i> ¡Copiado!';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = '<i class="ti ti-copy" aria-hidden="true"></i> Copiar prompt';
+    }, 2500);
+  });
+}
+
+// ── INIT ──
+buildPrompts();
+// Restore saved state if available
+try {
+  const saved = localStorage.getItem('diag_result');
+  if(saved){ const d = JSON.parse(saved); Object.assign(state, d); }
+} catch(e){}
+</script>
+</body>
+</html>
