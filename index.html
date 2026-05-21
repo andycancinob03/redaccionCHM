@@ -430,7 +430,7 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--surface);color:
 //  hardcodearla, o déjala vacía para que el
 //  tallerista la configure en la pestaña Resultados
 // ════════════════════════════════════════════════
-var SCRIPT_URL = '';  // ← pega aquí tu URL
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxrx7OmHHuzDnduyAqF99pBvmSdK4q7jmLGVrbrVMS5epLxQ3TX85KuN2RS3F5UhnYTOA/exec';  // ← pega aquí tu URL
 
 // ── STATE ──
 var S = { partA: new Array(8).fill(0), partB: [], partC: '' };
@@ -484,23 +484,50 @@ async function postResponse(data) {
   var url = getUrl();
   if (!url) return false;
   try {
+    var params = new URLSearchParams();
+    params.append('payload', JSON.stringify(data));
     await fetch(url, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
+      body: params
     });
     return true;
   } catch(e) { return false; }
 }
 
 // ── CARGAR RESULTADOS DEL SHEET ──
-async function fetchResults() {
-  var url = getUrl();
-  if (!url) throw new Error('Sin URL configurada');
-  var res = await fetch(url + '?accion=resultados&t=' + Date.now());
-  if (!res.ok) throw new Error('Error HTTP ' + res.status);
-  return await res.json();
+function fetchResults() {
+  return new Promise(function(resolve, reject) {
+    var url = getUrl();
+    if (!url) { reject(new Error('Sin URL configurada')); return; }
+
+    var cbName = 'gsCb_' + Date.now();
+    var script = document.createElement('script');
+    var timer;
+
+    window[cbName] = function(data) {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      resolve(data);
+    };
+
+    timer = setTimeout(function() {
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error('Tiempo agotado — verifica que la URL del Apps Script sea correcta y esté desplegada como "Anyone".'));
+    }, 15000);
+
+    script.onerror = function() {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error('No se pudo conectar — verifica la URL del Apps Script.'));
+    };
+
+    script.src = url + '?accion=resultados&callback=' + cbName + '&t=' + Date.now();
+    document.head.appendChild(script);
+  });
 }
 
 // ── NAV ──
